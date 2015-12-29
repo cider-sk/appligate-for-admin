@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理画面 | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <a href="/appligate-admin"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-middle">
+                    <p>iOS開発者名：株式会社さてここでモンダイです</p>
+                    <p>Android開発者名：株式会社さてここでモンダイです</p>
+                </div>
+                <div class="head-right">
+                    <a href="#">お問合せ</a><span>|</span>
+                    <a href="#">ヘルプ</a><span>|</span>
+                    <a href="#">ロゴ・資料のダウンロード</a>
+                    <a class="logout"href="#">ログアウト</a>
+                    <p>登録開発者名：株式会社さてここでモンダイです</p>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            
+            <div class="content clearfix">
+                <div class="head-menu clearfix">
+                    <div class="button-link register">
+                        <a href="#">アプリ新規登録</a>
+                    </div>
+                    <div class="adsence">
+                        <img src="img/adsence.png" alt="#">
+                    </div>
+                </div>
+
+                <div class="content clearfix">
+                    <div class="breadcrumbs">
+                        <p>登録アプリ一覧　＞　さてここでモンダイです</p>
+                    </div>    
+
+                    <ul class="nav nav-tabs mainTab">
+                        <li><a href="./app-single.html">レポート閲覧</a></li>
+                        <li class="tabmiddle"><a href="./edit-page.html">掲載記事編集</a></li>
+                        <li class="active"><a href="./support-page.html">サポート</a></li>
+                    </ul>
+                    <!-- / タブ-->
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1">
+                            <ul class="nav nav-tabs submenu">
+                                <li class="active"><a href="#subtab1" data-toggle="tab">リリース通知</a></li>
+                                <li><a href="#subtab2" data-toggle="tab">コメント編集</a></li>
+                                <li><a href="#subtab3" data-toggle="tab">予約履歴の確認</a></li>
+                            </ul>
+                            <div id="mySubTabContent" class="tab-content">
+                                <div class="tab-pane fade in active" id="subtab1">
+                                </div><!-- /#subtab1 -->
+                                <div class="tab-pane fade" id="subtab2">
+                                    <div class="favorite-num comment-num">
+                                        <table class="favorite">
+                                            <col span="2" class="left">
+                                            <col class="right">
+                                            <tr class="title">
+                                                <td class="t-left">OS</td>
+                                                <td class="t-left">コメント件数</td>
+                                                <td class="t-right">返信</td>
+                                            </tr>
+                                            <tr>
+                                                <td>iOS</td>
+                                                <td>2</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>android</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </table>
+                                    </div><!-- /.favorite-num -->
+                                    <div class="clearfix"></div>
+                                    <div class="view-comment">
+                                        <h4>コメントの閲覧・編集</h4>
+                                        <div class="comment-wrap">
+                                            <div class="sentence">
+                                                <h5>NoName @13bv(2015/07/22 03:31)</h5>
+                                                <p class="status public">公開</p>
+                                                <a class="change-status" href="#">非公開にする</a>
+                                                <div class="clearfix"></div>
+                                                <p>
+                                                予約したつもりになってた私も改めて予約しました。Twitterのクイズもありきたり過ぎない設問がすごくいいと思います。糖質ゼロとカロリーオフと、など他で話したくなりますね。アバターいじくるのが好きだけどイベントの順位争いは嫌いなので、こういうゲームで雑学増やしつつのんびり楽しみたいです。リリースまで後もうひと踏ん張り、ぜひ頑張ってください！遊べる日を楽しみに待っています！
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="rep-button">
+                                            <a href="#">このコメントに返信する</a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="comment-wrap">
+                                            <div class="sentence">
+                                                <h5>NoName @13bv(2015/07/22 03:31)</h5>
+                                                <p class="status public">公開</p>
+                                                <a class="change-status" href="#">非公開にする</a>
+                                                <div class="clearfix"></div>
+                                                <p>
+                                                予約したつもりになってた私も改めて予約しました。Twitterのクイズもありきたり過ぎない設問がすごくいいと思います。糖質ゼロとカロリーオフと、など他で話したくなりますね。アバターいじくるのが好きだけどイベントの順位争いは嫌いなので、こういうゲームで雑学増やしつつのんびり楽しみたいです。リリースまで後もうひと踏ん張り、ぜひ頑張ってください！遊べる日を楽しみに待っています！
+                                                </p>
+                                            </div>
+                                            <div class="repray">
+                                                <div class="sankaku"></div>
+                                            </div>
+                                        </div>
+                                        <div class="rep-button">
+                                            <a href="#">返信を編集する</a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="comment-wrap">
+                                            <div class="sentence">
+                                                <h5>NoName @13bv(2015/07/22 03:31)</h5>
+                                                <p class="status public">公開</p>
+                                                <a class="change-status" href="#">非公開にする</a>
+                                                <div class="clearfix"></div>
+                                                <p>
+                                                予約したつもりになってた私も改めて予約しました。Twitterのクイズもありきたり過ぎない設問がすごくいいと思います。糖質ゼロとカロリーオフと、など他で話したくなりますね。アバターいじくるのが好きだけどイベントの順位争いは嫌いなので、こういうゲームで雑学増やしつつのんびり楽しみたいです。リリースまで後もうひと踏ん張り、ぜひ頑張ってください！遊べる日を楽しみに待っています！
+                                                </p>
+                                            </div>
+                                            <div class="repray">
+                                                <p>
+                                                コメントありがとうございます。SNSクイズも見て下さって嬉しいです！アバターも変なのとか、組み合わせもたくさんあるので、楽しんでもらえると思います！励ましのお言葉を胸に、ラストスパート頑張ります！
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="rep-button">
+                                            <a href="#">返信を編集する</a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div><!-- /.view-comment -->
+                                </div><!-- /#subtab2 -->
+                                <div class="tab-pane fade" id="subtab3">
+                                    <p>コンテンツ3</p>
+                                </div><!-- /#subtab3 -->
+                            </div><!-- /#mySubTabContent -->  
+                        </div><!-- /#tab1 -->
+                        <div class="tab-pane fade" id="tab2">
+                            <p>コンテンツ2</p>
+                        </div><!-- /#tab2 -->
+                        <div class="tab-pane fade" id="tab3">
+                            <p>コンテンツ3</p>
+                        </div><!-- /#tab3 -->
+                    </div><!-- /#myTabContent -->                     
+                </div><!--  /.content-->
+
+                <div class="move-top">
+                    <div class="glyphicon glyphicon-chevron-up"></div>TOP
+                </div>
+            </div><!-- /.content -->
+            <footer>
+                <p>&copy;CopyRight - AltavistaRise. All Right Reserved.</p>
+            </footer>
+        </div><!-- /.container -->
+        <script>
+        $(".move-top").click(
+            function(){
+                $("html,body").animate({scrollTop:0},"fast");
+            }
+        );
+        for(var i=0; i<11; i++){
+            $(".year").append($("<option>").val(i+2010).text(i+2010+"年"));
+        }
+        for(var j=1; j<13; j++){
+            $(".month").append($("<option>").val(j).text(j+"月"));
+        }
+        for(var k=1; k<32; k++){
+            $(".day").append($("<option>").val(k).text(k+"日"));
+        }
+        $("a.setday").click( function(){
+            $(".year").val("2015");
+            $(".month").val("8");
+            $(".day").val("20");
+            $(".endyear").val("2015");
+            $(".endmonth").val("9");
+            $(".endday").val("10");
+        });
+        $("a.change-status").click(function(){
+            if($("p.status").hasClass("public")){
+                $("p.status").html("非公開")
+                    .removeClass("public")
+                    .addClass("draft");
+                $("a.change-status").html("公開する");
+            }else{
+                $("p.status").html("公開")
+                    .removeClass("draft")
+                    .addClass("public");
+                $("a.change-status").html("非公開にする");
+            }
+});
+        </script>
+    </body>
+</html>

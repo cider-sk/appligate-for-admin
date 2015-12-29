@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理画面 | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <a href="/appligate-admin"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-middle">
+                    <p>iOS開発者名：株式会社さてここでモンダイです</p>
+                    <p>Android開発者名：株式会社さてここでモンダイです</p>
+                </div>
+                <div class="head-right">
+                    <a href="#">お問合せ</a><span>|</span>
+                    <a href="#">ヘルプ</a><span>|</span>
+                    <a href="#">ロゴ・資料のダウンロード</a>
+                    <a class="logout"href="#">ログアウト</a>
+                    <p>登録開発者名：株式会社さてここでモンダイです</p>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            
+            <div class="content clearfix">
+                <div class="head-menu clearfix">
+                    <div class="button-link register">
+                        <a href="#">アプリ新規登録</a>
+                    </div>
+                    <div class="adsence">
+                        <img src="img/adsence.png" alt="#">
+                    </div>
+                </div>
+
+                <div class="content clearfix">
+                    <div class="breadcrumbs">
+                        <p>登録アプリ一覧　＞　さてここでモンダイです</p>
+                    </div>    
+
+                    <ul class="nav nav-tabs mainTab">
+                        <li><a href="./app-single.html">レポート閲覧</a></li>
+                        <li class="tabmiddle active"><a href="./edit-pege.html">掲載記事編集</a></li>
+                        <li><a href="./support-page.html">サポート</a></li>
+                    </ul>
+                    <!-- / タブ-->
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1">
+                            <ul class="nav nav-tabs submenu">
+                                <li class="active"><a href="#subtab1" data-toggle="tab">掲載内容の変更　</a></li>
+                                <li><a href="#subtab2" data-toggle="tab">ニュース記事の作成</a></li>
+                                <li><a href="#subtab3" data-toggle="tab">ガチャの作成</a></li>
+                            </ul>
+                            <div id="mySubTabContent" class="tab-content">
+                                <div class="tab-pane fade in active" id="subtab1">
+                                    <div class="caution">
+                                        <p>* 印は必須です。必ずご記入ください。</p>
+                                    </div>
+                                    <div class="process">
+                                        <span>アプリ基本情報</span><span class="next">＞</span>内容詳細<span class="next">＞</span>予約特典<span class="next">＞</span>完了
+                                    </div>
+                                    <div class="edit-form clearfix">
+                                        <div class="main-icon">
+                                            <img src="img/mainapp.png" alt="メインアイコン">
+                                            <a class="click" href="#">アイコンを選択</a><span class="caution">*</span>
+                                            <p class="img-text">200px ~ 1024px以内の正方形<br>(JPGまたはPNG形式)</p>
+                                        </div>
+                                        <div class="input-form">
+                                            <table class="input">
+                                                <tr>
+                                                    <th>アプリ名<span class="caution">*</span></th>
+                                                    <td><input type="text" name="appname"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>AppID<span class="caution">*</span></th>
+                                                    <td><input type="text" name="appid">
+                                                        <p class="sub-text">現段階で未定の場合は00と記入してください。<br>リリース前までに登録してください。<br>登録がないと、リリース通知時にストアに正しく遷移されません。</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>価格<span class="caution">*</span></th>
+                                                    <td><input type="text" name="value">
+                                                        <p class="sub-text">無料アプリの場合は0とご記入ください。</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>予約受付期間</th>
+                                                    <td><span class="start-year">2015年</span><span class="start-month">8月</span><span class="start-day">1日</span><span class="middle-days">〜</span>
+                                                        <select class="day endday" name="endday">
+                                                            <option value="">--</option>
+                                                        </select>
+                                                        <select class="month endmonth"name="endmonth">
+                                                            <option value="">--</option>
+                                                        </select>
+                                                        <select class="year endyear" name="endyear">
+                                                            <option value="">--</option>
+                                                        </select>
+                                                        <div class="clearfix"></div>
+                                                        <p class="sub-text">終了日を設定しない場合は、リリース通知と同時に自動的に予約終了し、掲載が落とされます。</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>リリース予定日<span class="caution">*</span></th>
+                                                    <td><input type="text" name="release"></td>
+                                                </tr> 
+                                                <tr>
+                                                    <th>リリース通知設定<span class="caution">*</span></th>
+                                                    <td>
+                                                        <input type="radio" name="q1" value="手動"> 手動
+                                                        <input type="radio" name="q1" value="自動"> 自動
+                                                        リリース通知先URL <input type="text" name="url">
+                                                        <div class="clearfix"></div>
+                                                        <p class="sub-text">自動通知の場合、Storeにてリリースを検知し次第、自動的に予約者へ通知がされます。<br>
+                                                        　但し自動通知の場合でもリリース通知時の場合でもリリース通知時の必須項目が未入力/不正確だった場合は、通知されません。（その場合はアラートメールを流します、）<br>
+                                                        現段階で不明の場合は空欄で構いませんが、リリース前にはご記入ください。</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="input bottom">
+                                                <tr>
+                                                    <th>ユーザーからのコメント通知アドレス<span class="caution">*</span></th>
+                                                    <td><input type="text" name="email"><a class="click" href="#">変更</a></td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                    </div><!-- /.edit-form -->
+                                    <div class="setting-tag clearfix">
+                                        <h4>タグの設定</h4>  
+                                        <p>
+                                        タグを付ける事で、検索に引っかかり易くなります。必ず一つは選択してください。最大６つまで指定できます。<br>
+                                        タグには優先順位があります。関連度の高いものから順に選んでください。
+                                        </p>
+                                        <ul class="row">
+                                            <li class="col-xs-4">
+                                                ジャンルタグ
+                                                <select class="gametag" name="janletag">
+                                                    <option value="">指定なし</option>
+                                                </select>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                第1タグ
+                                                <select class="gametag" name="gametag1">
+                                                    <option value="">指定なし</option>
+                                                </select>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                第2タグ
+                                                <select class="gametag" name="gametag2">
+                                                    <option value="">指定なし</option>
+                                                </select>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                第3タグ
+                                                <select class="gametag" name="gametag3">
+                                                    <option value="">指定なし</option>
+                                                </select>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                第4タグ
+                                                <select class="gametag" name="gametag4">
+                                                    <option value="">指定なし</option>
+                                                </select>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                第5タグ
+                                                <select class="gametag" name="gametag5">
+                                                    <option value="">指定なし</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                        <div class="button-link next-edit">
+                                            <a href="#">次へ</a>
+                                        </div>
+                                        <div class="clearfix"></div>                                       
+                                    </div><!-- /.setting-tag -->
+                                </div><!-- /#subtab1 -->
+                                <div class="tab-pane fade" id="subtab2">
+                                    <p>コンテンツ2</p>
+                                </div><!-- /#subtab2 -->
+                                <div class="tab-pane fade" id="subtab3">
+                                    <p>コンテンツ3</p>
+                                </div><!-- /#subtab3 -->
+                            </div><!-- /#mySubTabContent -->  
+                        </div><!-- /#tab1 -->
+                        <div class="tab-pane fade" id="tab2">
+                            <p>コンテンツ2</p>
+                        </div><!-- /#tab2 -->
+                        <div class="tab-pane fade" id="tab3">
+                            <p>コンテンツ3</p>
+                        </div><!-- /#tab3 -->
+                    </div><!-- /#myTabContent -->                     
+                </div><!--  /.content-->
+
+                <div class="move-top">
+                    <div class="glyphicon glyphicon-chevron-up"></div>TOP
+                </div>
+            </div><!-- /.content -->
+            <footer>
+                <p>&copy;CopyRight - AltavistaRise. All Right Reserved.</p>
+            </footer>
+        </div><!-- /.container -->
+        <script>
+        $(".move-top").click(
+            function(){
+                $("html,body").animate({scrollTop:0},"fast");
+            }
+        );
+        for(var i=0; i<11; i++){
+            $("select.year").append($("<option>").val(i+2015).text(i+2015+"年"));
+        }
+        for(var j=1; j<13; j++){
+            $("select.month").append($("<option>").val(j).text(j+"月"));
+        }
+        for(var k=1; k<32; k++){
+            $("select.day").append($("<option>").val(k).text(k+"日"));
+        }
+        $("a.setday").click( function(){
+            $(".year").val("2015");
+            $(".month").val("8");
+            $(".day").val("20");
+            $(".endyear").val("2015");
+            $(".endmonth").val("9");
+            $(".endday").val("10");
+        });
+        $("select.gametag").append($("<option>").val("RPG").text("RPG"));
+        $("select.gametag").append($("<option>").val("クイズ").text("クイズ"));
+        $("select.gametag").append($("<option>").val("アバター").text("アバター"));
+        $("select.gametag").append($("<option>").val("ゆるかわ").text("ゆるかわ"));
+        $("select.gametag").append($("<option>").val("パズル").text("パズル"));
+                </script>
+    </body>
+</html>
