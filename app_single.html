@@ -31,7 +31,7 @@
                     $(document).ready(function() {
                         $('.public_sidebar').load('sidebar.html');
                     });
-                </script>                
+                </script>
             </div><!-- ./public_sidebar -->
             <div class="main_contents">
                 <div class="searchBox clearfix">
@@ -41,28 +41,20 @@
                 </div>
                 <div class="breadcrumb">
                     <p class="gray_p">公開中アプリ一覧（事前予約）</p>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">さて、ここでモンダイです。</p>
                 </div>
-                <div class="pagenav">
-                    <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
-                    <a href="#"><span class="current">1</span></a>
-                    <a href="#"><span>2</span></a>
-                    <a href="#"><span>3</span></a>
-                    ・・・
-                    <a href="#"><span>25</span></a>
-                        <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
-                </div><!-- ./pagenav -->
-                <div class="clearfix"></div>
                 
                 <table class="simple_t">
                     <tr class="tableTitle">
-                        <td style="width:6%;">ID<a class="sort_btn" href="#"></a></td>
-                        <td style="width:8%;">登録日<a class="sort_btn" href="#"></a></td>
+                        <td style="width:6%;">ID</td>
+                        <td style="width:8%;">登録日</td>
                         <td style="width:18%;">アプリ</td>
-                        <td style="width:7%;">OS<a class="sort_btn" href="#"></a></td>
-                        <td style="width:18%;">会社名<a class="sort_btn" href="#"></a></td>
-                        <td>特典<a class="sort_btn" href="#"></a></td>
-                        <td>ガチャ<a class="sort_btn" href="#"></a></td>
-                        <td>予約・特典ページビュー数<a class="sort_btn" href="#"></a></td>
+                        <td style="width:7%;">OS</td>
+                        <td style="width:18%;">会社名</td>
+                        <td>特典</td>
+                        <td>ガチャ</td>
+                        <td>予約・特典ページビュー数</td>
                         <td>リンク</td>
                     </tr>
                     <tr>
@@ -76,27 +68,28 @@
                         <td>000,000,000,000</td>
                         <td><a href="#">ページを開く</a></td>
                     </tr>
-                    <tr>
-                        <td>00001</td>
-                        <td>12/01</td>
-                        <td><a class="black_a bold" href="#">さてここでモンダイです</a></td>
-                        <td class="android">android</td>
-                        <td><a class="black_a" href="#">さてここでモンダイです</a></td>
-                        <td>有</td>
-                        <td>有</td>
-                        <td>000,000,000,000</td>
-                        <td><a href="#">ページを開く</a></td>
-                    </tr>
                 </table>
-                <div class="pagenav">
-                    <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
-                    <a href="#"><span class="current">1</span></a>
-                    <a href="#"><span>2</span></a>
-                    <a href="#"><span>3</span></a>
-                    ・・・
-                    <a href="#"><span>25</span></a>
-                        <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
-                </div><!-- ./pagenav -->
+                <div class="clearfix" style="margin-top:20px;">
+                    <div class="statusBox">
+                        <p class="status inline">ステータス</p>
+                        <div class="news-status news-public clearfix" style="float:right;">
+                            <span>公開中</span>
+                            <div class="pub-color"></div>
+                        </div>
+                    </div>
+                    <div class="responsible">
+                        <p class="person inline">会社側の担当者名：福島　理沙</p>
+                        <p class="contact inline"><a class="red_a bold" href="#">担当者へ問い合わせ</a></p>
+                    </div>
+                </div>
+                <p class="back_gray white_p bold p_title">アプリ基本情報</p>
+                <ul class="app_information">
+                    <li><a href="./app_basic_info.html">アプリ基本情報</a></li>
+                    <li><a href="./app_gacha_info.html">ガチャ情報</a></li>
+                    <li><a href="./news_list.html">ニュース一覧</a></li>
+                    <li><a href="./appeport.html">レポート一覧</a></li>
+                    <li><a href="./app_comment_list.html">アプリコメント一覧</a></li>
+                </ul>
             </div>
         </div><!-- /.container -->
         <footer>

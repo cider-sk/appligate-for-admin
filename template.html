@@ -19,7 +19,7 @@
     <body>
         <div class="container row">
             <header>
-                <a href="./appligate-foe-admin"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
                 <div class="head-right">
                     <a class="logout"href="#">アカウント追加</a>
                     <a class="logout"href="#">ログアウト</a>
@@ -27,47 +27,11 @@
                 <div class="clearfix"></div>
             </header>
             <div class="public_sidebar">
-                <div class="sideBox1">
-                    <h3 class="sideTitle1">管理</h3>
-                    <div class="sidemenu">
-                        <div class="sideTabMenu gray_p">
-                            <p>公開中アプリ</p>
-                            <ul>
-                                <li><a href="#">事前予約</a></li>
-                                <li><a href="#">配信中</a></li>
-                            </ul>
-                        </div>
-                        <ul>
-                            <li><a href="#">終了アプリ</a></li>
-                            <li><a href="#">申請中アプリ</a></li>
-                            <li><a href="#">配信ニュース一覧</a></li>
-                            <li><a href="#">コメント一覧</a></li>
-                            <li><a href="#">支払</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="sideBox2">
-                    <h3 class="sideTitle2">編集</h3>
-                    <div class="sidemenu">
-                        <ul>
-                            <li><a href="#">ニュース配信登録</a></li>
-                            <li><a href="#">タグ編集・追加</a></li>
-                            <li><a href="#">広告枠編集</a></li>
-                            <li><a href="#">メール編集</a></li>
-                            <li><a href="#">通報リスト</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="sideBox3">
-                    <h3 class="sideTitle3">その他</h3>
-                    <div class="sidemenu">
-                        <ul>
-                            <li><a href="#">レポート</a></li>
-                            <li><a href="#">ディベロッパー一覧</a></li>
-                            <li><a href="#">ユーザー一覧</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.public_sidebar').load('sidebar.html');
+                    });
+                </script>
             </div><!-- ./public_sidebar -->
             <div class="main_contents">
                 <div class="searchBox clearfix">

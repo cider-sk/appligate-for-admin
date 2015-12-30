@@ -1,4 +1,4 @@
-a{
+a,a:hover{
     color:#671eff;
 }
 html {
@@ -63,7 +63,7 @@ header p{
     color:#fff;
     font-size:21px;
 }
-.public_sidebar ul{
+ul{
     list-style:none;
 }
 .public_sidebar li{
@@ -130,8 +130,13 @@ form.head_search input[type="submit"]{
     border:none;
     padding: 4px 20px;
 }
-p.main_title{
+.breadcrumb{
+    background-color:#fff;
+    margin-bottom:0;
+}
+.breadcrumb p{
     font-size:16px;
+    display:inline;
 }
 .pagenav{
     float:right;
@@ -162,10 +167,9 @@ tr.tableTitle td{
     background-color:#f2f2f2;
 }
 table.simple_t td{
-    
     padding:20px 5px;
-    border:solid 2px #b4b4be;
-    border-bottom:solid 2px #b4b4be!important;
+    border:solid 1px #5d5d5d;
+    border-bottom:solid 1px #5d5d5d!important;
     
 }
 a.sort_btn{
@@ -184,4 +188,50 @@ td.ios{
 }
 td.android{
     color:#8cda64;
+}
+.responsible{
+    margin-top:20px;
+    margin-right:20px;
+    float:right;
+}
+.responsible p{
+    padding: 10px;
+    border: 1px solid #5d5d5d;
+}
+.responsible p.person{
+    background-color: #f2f2f2;
+    margin-right:-5px;
+    border-right:none;
+}
+.statusBox{
+    margin-top: 11px;
+    padding: 6px;
+    border: 1px solid #5d5d5d;float:right;
+}
+.statusBox p.status{
+    margin-right:10px;
+}
+.statusBox .news-status {
+    padding: 1px;
+}
+.inline{
+    display:inline;
+}
+.red_a{
+    color:#bb0000;
+}
+.white_p{
+    color:#fff;
+}
+.back_gray{
+    background-color:#4d4d4d;
+}
+p.p_title{
+    margin-top:20px;
+    padding:5px 40px;
+}
+
+ul.app_information li{
+    margin-top:20px;
+    font-weight:bold;
 }
