@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <a class="gray_p" href="./index.html">公開中アプリ一覧（事前予約）</a>
+                    <span class="gray_p">＞</span>
+                    <a class="gray_p" href="./index.html">さて、ここでモンダイです。</a>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">アプリコメント一覧</p>
+                </div>
+
+                <table class="simple_t">
+                    <tr class="tableTitle">
+                        <td style="width:6%;">ID</td>
+                        <td style="width:8%;">登録日</td>
+                        <td style="width:18%;">アプリ</td>
+                        <td style="width:7%;">OS</td>
+                        <td style="width:18%;">会社名</td>
+                        <td>特典</td>
+                        <td>ガチャ</td>
+                        <td>予約・特典ページビュー数</td>
+                        <td>リンク</td>
+                    </tr>
+                    <tr>
+                        <td>00001</td>
+                        <td>12/01</td>
+                        <td><a class="black_a bold" href="./app_single.html">さてここでモンダイです</a></td>
+                        <td class="ios">iOS</td>
+                        <td><a class="black_a" href="./com_single.html">さてここでモンダイです</a></td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>000,000,000,000</td>
+                        <td><a href="#">ページを開く</a></td>
+                    </tr>
+                </table>
+                <div class="clearfix" style="margin-top:20px;">
+                    <div class="statusBox">
+                        <p class="status inline">ステータス</p>
+                        <div class="news-status news-public clearfix" style="float:right;">
+                            <span>公開中</span>
+                            <div class="pub-color"></div>
+                        </div>
+                    </div>
+                    <div class="responsible">
+                        <p class="person inline">会社側の担当者名：福島　理沙</p>
+                        <p class="contact inline"><a class="red_a bold" href="./contact_responsible.html">担当者へ問い合わせ</a></p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="statusBox">
+                        <p class="status inline">コメントステータス</p>
+                        <div class="news-status news-public clearfix" style="float:right;">
+                            <span>公開中</span>
+                            <div class="pub-color"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="favorite-num comment-num">
+                    <table class="favorite">
+                        <col span="2" class="left">
+                        <col class="right">
+                        <tr class="title">
+                            <td class="t-left">コメント件数</td>
+                            <td class="t-right">返信</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </div><!-- /.favorite-num -->
+                <div class="clearfix"></div>
+                <div class="view-comment">
+                    <h4>コメントの閲覧・編集</h4>
+                    <div class="comment-wrap">
+                        <div class="sentence">
+                            <div class="gray_btn">
+                                <a href="#">このユーザーアカウントを停止する</a>
+                            </div>
+                            <h5>NoName @13bv(2015/07/22 03:31)</h5>
+                            <p class="status public">公開</p>
+                            <a class="change-status" href="#">非公開にする</a>
+                            <div class="clearfix"></div>
+                            <p>
+                            予約したつもりになってた私も改めて予約しました。Twitterのクイズもありきたり過ぎない設問がすごくいいと思います。糖質ゼロとカロリーオフと、など他で話したくなりますね。アバターいじくるのが好きだけどイベントの順位争いは嫌いなので、こういうゲームで雑学増やしつつのんびり楽しみたいです。リリースまで後もうひと踏ん張り、ぜひ頑張ってください！遊べる日を楽しみに待っています！
+                            </p>
+                        </div>
+                    </div>
+                    <div class="comment-wrap">
+                        <div class="sentence">
+                            <div class="gray_btn">
+                                <a href="#">このユーザーアカウントを停止する</a>
+                            </div>
+                            <h5>NoName @13bv(2015/07/22 03:31)</h5>
+                            <p class="status public">公開</p>
+                            <a class="change-status" href="#">非公開にする</a>
+                            <div class="clearfix"></div>
+                            <p>
+                            予約したつもりになってた私も改めて予約しました。Twitterのクイズもありきたり過ぎない設問がすごくいいと思います。糖質ゼロとカロリーオフと、など他で話したくなりますね。アバターいじくるのが好きだけどイベントの順位争いは嫌いなので、こういうゲームで雑学増やしつつのんびり楽しみたいです。リリースまで後もうひと踏ん張り、ぜひ頑張ってください！遊べる日を楽しみに待っています！
+                            </p>
+                        </div>
+                        <div class="repray">
+                            <h5><span>返信</span>(2015/07/22 03:31)</h5>
+                            <p class="status public">公開</p>
+                            <a class="change-status" href="#">非公開にする</a>
+                            <div class="clearfix"></div>
+                            <p>
+                            コメントありがとうございます。SNSクイズも見て下さって嬉しいです！アバターも変なのとか、組み合わせもたくさんあるので、楽しんでもらえると思います！励ましのお言葉を胸に、ラストスパート頑張ります！
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- /.view-comment -->
+            </div><!-- ./main_contents -->
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

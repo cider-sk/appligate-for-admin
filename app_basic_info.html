@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <a class="gray_p" href="./index.html">公開中アプリ一覧（事前予約）</a>
+                    <span class="gray_p">＞</span>
+                    <a class="gray_p" href="./index.html">さて、ここでモンダイです。</a>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">アプリ基本情報</p>
+                </div>
+
+                <table class="simple_t">
+                    <tr class="tableTitle">
+                        <td style="width:6%;">ID</td>
+                        <td style="width:8%;">登録日</td>
+                        <td style="width:18%;">アプリ</td>
+                        <td style="width:7%;">OS</td>
+                        <td style="width:18%;">会社名</td>
+                        <td>特典</td>
+                        <td>ガチャ</td>
+                        <td>予約・特典ページビュー数</td>
+                        <td>リンク</td>
+                    </tr>
+                    <tr>
+                        <td>00001</td>
+                        <td>12/01</td>
+                        <td><a class="black_a bold" href="./app_single.html">さてここでモンダイです</a></td>
+                        <td class="ios">iOS</td>
+                        <td><a class="black_a" href="./com_single.html">さてここでモンダイです</a></td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>000,000,000,000</td>
+                        <td><a href="#">ページを開く</a></td>
+                    </tr>
+                </table>
+                <div class="clearfix" style="margin-top:20px;">
+                    <div class="statusBox">
+                        <p class="status inline">ステータス</p>
+                        <div class="news-status news-public clearfix" style="float:right;">
+                            <span>公開中</span>
+                            <div class="pub-color"></div>
+                        </div>
+                    </div>
+                    <div class="responsible">
+                        <p class="person inline">会社側の担当者名：福島　理沙</p>
+                        <p class="contact inline"><a class="red_a bold" href="./contact_responsible.html">担当者へ問い合わせ</a></p>
+                    </div>
+                </div>
+                <div class="caution">
+                    <p>* 印は必須です。必ずご記入ください。</p>
+                </div>
+                <div class="process">
+                    <span>アプリ基本情報</span><span class="next">＞</span>内容詳細<span class="next">＞</span>予約特典<span class="next">＞</span>完了
+                </div>
+                <div class="edit-form clearfix">
+                    <div class="clearfix">
+                        <div class="main-icon">
+                            <img src="img/mainapp.png" alt="メインアイコン">
+                            <a class="click" href="#">アイコンを選択</a><span class="caution">*</span>
+                            <p class="img-text">200px ~ 1024px以内の正方形<br>(JPGまたはPNG形式)</p>
+                        </div>
+                        <div class="input-form">
+                            <table class="input">
+                                <tr>
+                                    <th>アプリ名<span class="caution">*</span></th>
+                                    <td>さて、ここでモンダイです！</td>
+                                </tr>
+                                <tr>
+                                    <th>AppID<span class="caution">*</span></th>
+                                    <td>00<td>
+                                </tr>
+                                <tr>
+                                    <th>価格<span class="caution">*</span></th>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>予約受付期間</th>
+                                    <td><span class="m20float">2015年</span><span class="m20float">8月</span><span class="m20float">1日</span><span class="m20float">〜</span><span class="m20float">2015年</span><span class="m20float">8月</span><span class="m20float">1日</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>リリース予定日<span class="caution">*</span></th>
+                                    <td>調整中</td>
+                                </tr> 
+                                <tr>
+                                    <th>リリース通知設定<span class="caution">*</span></th>
+                                    <td>手動</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <table class="input bottom">
+                        <tr>
+                            <th>ユーザーからのコメント通知アドレス<span class="caution">*</span></th>
+                            <td>現在のアドレス : example@examlpe.com</td>
+                        </tr>
+                    </table>
+                </div><!-- /.edit-form -->
+
+                <div class="setting-tag clearfix">
+                    <h4 class="squareT">タグの設定</h4>  
+                    <p>
+                    タグを付ける事で、検索に引っかかり易くなります。必ず一つは選択してください。最大６つまで指定できます。<br>
+                    タグには優先順位があります。関連度の高いものから順に選んでください。
+                    </p>
+                    <ul class="row">
+                        <li class="col-xs-4">
+                            ジャンルタグ
+                            <span class="ml20">RPG</span>
+                        </li>
+                        <li class="col-xs-4">
+                            第1タグ
+                            <span class="ml20">RPG</span>
+                        </li>
+                        <li class="col-xs-4">
+                            第2タグ
+                            <span class="ml20">RPG</span>
+                        </li>
+                        <li class="col-xs-4">
+                            第3タグ
+                            <span class="ml20">RPG</span>
+                        </li>
+                        <li class="col-xs-4">
+                            第4タグ
+                            <span class="ml20">RPG</span>
+                        </li>
+                        <li class="col-xs-4">
+                            第5タグ
+                            <span class="ml20">RPG</span>
+                        </li>
+                    </ul>
+                </div><!-- /.setting-tag -->
+                <div class="settingBox">
+                    <h4 class="squareT">スクリーンショット</h4>
+                    <div class="imgBoxA">
+                        <p>1</p>
+                        <img src="img/appimg.png" alt="" style="width:20%;">
+                    </div>
+                    <h4 class="squareT">一覧表示用バナー</h4>
+                    <div class="imgBoxB">
+                        <p>使用する</p>
+                        <img src="img/appbaner.png" alt="" style="width:70%;">
+                    </div>
+                    <h4 class="squareT">アプリ説明文<span class="caution">* </span><span class="red_a" style="font-weight:100;">(2000文字以内)</span></h4>  
+                </div><!-- /.settingBox -->
+                <div class="settingBoxA">
+                    <h4 class="squareT">予約特典</h4>
+                    <div class="reserveBox">
+                        <p>あり</p>
+                        <h5><span class="circle"></span>予約上限数</h5>
+                        <p>設けない</p>
+                        <h5><span class="circle"></span>予約特典ID種別</h5>
+                        <p>ユニークID方式</p>
+                        <h5><span class="circle"></span>予約特典画像</h5>
+                        
+                        <h5><span class="circle"></span>予約特典紹介文章</h5>
+                        <img src="img/apppresent.png" style="margin-left:50px;width:50%;" alt="">
+                        <h5><span class="circle"></span>特典ID利用方法説明文章</h5>
+                        <p>リリース後にこちらの画面で説明</p>
+                    </div>
+                </div><!-- /.settingBox -->
+                <div class="button-link next-edit">
+                    <a href="#">編集</a>
+                </div>
+                <div class="clearfix" style="margin-top:20px;">
+                    <div class="statusBox">
+                        <p class="status inline">ステータス</p>
+                        <div class="news-status news-public clearfix" style="float:right;">
+                            <span>公開中</span>
+                            <div class="pub-color"></div>
+                        </div>
+                    </div>
+                    <div class="responsible">
+                        <p class="person inline">会社側の担当者名：福島　理沙</p>
+                        <p class="contact inline"><a class="red_a bold" href="./contact_responsible.html">担当者へ問い合わせ</a></p>
+                    </div>
+                </div>
+            </div><!-- ./main_contents -->
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

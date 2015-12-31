@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <a class="gray_p" href="./index.html">公開中アプリ一覧（事前予約）</a>
+                    <span class="gray_p">＞</span>
+                    <a class="gray_p" href="./index.html">さて、ここでモンダイです。</a>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">レポート一覧</p>
+                </div>
+
+                <table class="simple_t">
+                    <tr class="tableTitle">
+                        <td style="width:6%;">ID</td>
+                        <td style="width:8%;">登録日</td>
+                        <td style="width:18%;">アプリ</td>
+                        <td style="width:7%;">OS</td>
+                        <td style="width:18%;">会社名</td>
+                        <td>特典</td>
+                        <td>ガチャ</td>
+                        <td>予約・特典ページビュー数</td>
+                        <td>リンク</td>
+                    </tr>
+                    <tr>
+                        <td>00001</td>
+                        <td>12/01</td>
+                        <td><a class="black_a bold" href="./app_single.html">さてここでモンダイです</a></td>
+                        <td class="ios">iOS</td>
+                        <td><a class="black_a" href="./com_single.html">さてここでモンダイです</a></td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>000,000,000,000</td>
+                        <td><a href="#">ページを開く</a></td>
+                    </tr>
+                </table>
+                <div class="clearfix" style="margin-top:20px;">
+                    <div class="statusBox">
+                        <p class="status inline">ステータス</p>
+                        <div class="news-status news-public clearfix" style="float:right;">
+                            <span>公開中</span>
+                            <div class="pub-color"></div>
+                        </div>
+                    </div>
+                    <div class="responsible">
+                        <p class="person inline">会社側の担当者名：福島　理沙</p>
+                        <p class="contact inline"><a class="red_a bold" href="./contact_responsible.html">担当者へ問い合わせ</a></p>
+                    </div>
+                </div>
+
+                <ul class="nav nav-tabs submenu topTab">
+                    <li class="active"><a href="#subtab1" data-toggle="tab">アプリ</a></li>
+                    <li><a href="#subtab2" data-toggle="tab">ニュース</a></li>
+                    <li><a href="#subtab3" data-toggle="tab">ガチャ</a></li>
+                </ul>
+                <div id="mySubTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="subtab1">
+                        <div class="period clearfix">
+                            <h4>期間限定</h4>
+                            <p>期間</p>
+                            <form method="post" action="#">
+                                <select class="year" name="year">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="month" name="month">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="day" name="day">
+                                    <option value="">--</option>
+                                </select>
+                                <span style="margin:10px;">〜</span>
+                                <select class="year endyear" name="endyear">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="month endmonth"name="endmonth">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="day endday" name="endday">
+                                    <option value="">--</option>
+                                </select>
+                                <div class="button-link refine">
+                                    <a href="#">絞り込み</a>
+                                </div>
+                            </form>
+                            <a class="setday" href="#">開始日〜当日に設定する</a>
+                        </div><!-- /.period -->
+                        <div class="button-link csv">
+                            <a href="#">CSV出力</a>
+                        </div>
+                        <table class="report">
+
+                            <tr class="title">
+                                <td rowspan="2">日付</td>
+                                <td rowspan="2">順位</td>
+                                <td rowspan="2">IMP</td>
+                                <td colspan="4" class="border-none">アプリ詳細ビュー数</td>
+                                <td rowspan="2" class="border-left">予約数</td>
+                            </tr>
+                            <tr class="row-title">
+                                <td>IMP</td>
+                                <td>ニュース</td>
+                                <td>その他</td>
+                                <td class="dark">合計</td>
+                            </tr>
+                            <tr class="value">
+                                <td>2015/08/04</td>
+                                <td>5</td>
+                                <td>2.253.1567</td>
+                                <td>65.564</td>
+                                <td>36</td>
+                                <td>250</td>
+                                <td>65.850</td>
+                                <td>580</td>
+                            </tr>
+                            <tr class="value">
+                                <td>2015/08/05</td>
+                                <td>2</td>
+                                <td>2.253.1567</td>
+                                <td>65.564</td>
+                                <td>36</td>
+                                <td>250</td>
+                                <td>65.850</td>
+                                <td>580</td>
+                            </tr>
+                            <tr class="sum value">
+                                <td>合計期間</td>
+                                <td></td>
+                                <td>112.657.853</td>
+                                <td>327.820</td>
+                                <td>180</td>
+                                <td>1.250</td>
+                                <td>329.250</td>
+                                <td>2900</td>
+                            </tr>
+                        </table>
+                    </div><!-- /#subtab1 -->
+                    <div class="tab-pane fade" id="subtab2">
+                        <div class="button-link csv">
+                            <a href="#">CSV出力</a>
+                        </div>
+                        <table class="report news-table">
+                            <tr class="title">
+                                <td>公開日</td>
+                                <td>OS</td>
+                                <td>記事タイトル</td>
+                                <td>IMP</td>
+                                <td>記事ビュー数</td>
+                                <td>ステータス</td>
+                            </tr>
+                            <tr class="value">
+                                <td>2015/08/01</td>
+                                <td>iOS<br>android</td>
+                                <td>バナーを更新したぞ。仲間たちのイラスト・・・</td>
+                                <td>2.253.1567</td>
+                                <td>65,850</td>
+                                <td class="right-value">
+                                    <div class="news-status news-public clearfix">
+                                        <span>公開中</span>
+                                        <div class="pub-color"></div>
+                                    </div>
+                                    <a href="./">編集</a>
+                                </td>
+                            </tr>
+                            <tr class="value">
+                                <td>2015/08/02</td>
+                                <td>android</td>
+                                <td>バナーを更新したぞ。仲間たちのイラスト・・・</td>
+                                <td>2.253.1567</td>
+                                <td>65,850</td>
+                                <td class="right-value">
+                                    <div class="news-status news-public clearfix">
+                                        <span>公開中</span>
+                                        <div class="pub-color"></div>
+                                    </div>
+                                    <a href="./">編集</a>
+                                </td>
+                            </tr>
+                            <tr class="value">
+                                <td>2015/08/03</td>
+                                <td>iOS</td>
+                                <td>バナーを更新したぞ。仲間たちのイラスト・・・</td>
+                                <td>2.253.1567</td>
+                                <td>65,850</td>
+                                <td class="right-value">
+                                    <div class="news-status news-private clearfix">
+                                        <span>非公開</span>
+                                        <div class="pri-color"></div>
+                                    </div>
+                                    <a href="./">編集</a>
+                                </td>
+                            </tr>
+                            <tr class="value">
+                                <td>2015/08/04</td>
+                                <td>iOS</td>
+                                <td>バナーを更新したぞ。仲間たちのイラスト・・・</td>
+                                <td>2.253.1567</td>
+                                <td>65,850</td>
+                                <td class="right-value">
+                                    <div class="news-status news-private clearfix">
+                                        <span>非公開</span>
+                                        <div class="pri-color"></div>
+                                    </div>
+                                    <a href="./">編集</a>
+                                </td>
+                            </tr>
+                            <tr class="value">
+                                <td>2015/08/05</td>
+                                <td>iOS</td>
+                                <td>バナーを更新したぞ。仲間たちのイラスト・・・</td>
+                                <td>2.253.1567</td>
+                                <td>65,850</td>
+                                <td class="right-value">
+                                    <div class="news-status news-private clearfix">
+                                        <span>非公開</span>
+                                        <div class="pri-color"></div>
+                                    </div>
+                                    <a href="./">編集</a>
+                                </td>
+                            </tr>
+                            <tr class="sum value">
+                                <td>合計</td>
+                                <td></td>
+                                <td></td>
+                                <td>112,657,835</td>
+                                <td>329,250</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div><!-- /#subtab2 -->
+                    <div class="tab-pane fade" id="subtab3">
+                        <div class="period clearfix">
+                            <h4>期間限定</h4>
+                            <p>期間</p>
+                            <form method="post" action="#">
+                                <select class="year" name="year">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="month" name="month">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="day" name="day">
+                                    <option value="">--</option>
+                                </select>
+                                <span style="margin:10px;">〜</span>
+                                <select class="year endyear" name="endyear">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="month endmonth"name="endmonth">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="day endday" name="endday">
+                                    <option value="">--</option>
+                                </select>
+                                <div class="button-link refine">
+                                    <a href="#">絞り込み</a>
+                                </div>
+                            </form>
+                            <a class="setday" href="#">開始日〜当日に設定する</a>
+                        </div><!-- /.period -->
+                        <div class="button-link csv">
+                            <a href="#">CSV出力</a>
+                        </div>
+                        <div id="myOsTabContent" class="tab-content">
+                            <ul id="osmenu" class="nav nav-tabs submenu">
+                                <li class="active"><a href="#ostab1" data-toggle="tab">レポート</a></li>
+                                <li><a href="#ostab2" data-toggle="tab">レアガチャ収益</a></li>
+                            </ul>
+                            <div class="tab-pane fade in active" id="ostab1">
+                                <table class="report">
+
+                                    <tr class="title">
+                                        <td rowspan="2"></td>
+                                        <td rowspan="2">順位</td>
+                                        <td rowspan="2">IMP</td>
+                                        <td rowspan="2">ガチャページビュー数</td>
+                                        <td rowspan="2">ガチャ利用人数</td>
+                                        <td colspan="3" class="border-none">ガチャ回転数</td>
+                                        <td rowspan="2" class="border-left">シェア回数</td>
+                                    </tr>
+                                    <tr class="row-title">
+                                        <td>ノーマル</td>
+                                        <td>レア</td>
+                                        <td class="dark">合計</td>
+                                    </tr>
+                                    <tr class="value">
+                                        <td>2015/08/01</td>
+                                        <td>2</td>
+                                        <td>2.253.1567</td>
+                                        <td>65.564</td>
+                                        <td>36</td>
+                                        <td>65.850</td>
+                                        <td>65.850</td>
+                                        <td>65.850</td>
+                                        <td>580</td>
+                                    </tr>
+                                    <tr class="value">
+                                        <td>2015/08/01</td>
+                                        <td>2</td>
+                                        <td>2.253.1567</td>
+                                        <td>65.564</td>
+                                        <td>36</td>
+                                        <td>65.850</td>
+                                        <td>65.850</td>
+                                        <td>65.850</td>
+                                        <td>580</td>
+                                    </tr>
+                                    <tr class="sum value">
+                                        <td>合計期間</td>
+                                        <td></td>
+                                        <td>112.657.853</td>
+                                        <td>327.820</td>
+                                        <td>327.820</td>
+                                        <td>327.820</td>
+                                        <td>1.250</td>
+                                        <td>329.250</td>
+                                        <td>2900</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /#ostab1 -->
+                            <div class="tab-pane fade" id="ostab2">
+                                <table class="report news-table" style="margin-top:0;">
+                                    <tr class="title">
+                                        <td>日付</td>
+                                        <td>利用人数</td>
+                                        <td>利用回数</td>
+                                        <td>収益額</td>
+                                    </tr>
+                                    <tr class="value">
+                                        <td>2015/08/01</td>
+                                        <td>65,850</td>
+                                        <td>65,850</td>
+                                        <td>131,700</td>
+                                    </tr>
+                                    <tr class="value">
+                                        <td>2015/08/01</td>
+                                        <td>65,850</td>
+                                        <td>65,850</td>
+                                        <td>131,700</td>
+                                    </tr>
+                                    <tr class="sum value">
+                                        <td>期間合計</td>
+                                        <td>231442</td>
+                                        <td>124124</td>
+                                        <td>124124</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /#subtab2 -->
+                        </div><!-- /#myOsTabContent -->
+                    </div><!-- /#subtab3 -->
+                </div><!-- /#mySubTabContent -->  
+            </div><!-- ./main_contents -->
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>
