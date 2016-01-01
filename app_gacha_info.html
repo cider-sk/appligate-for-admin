@@ -44,7 +44,7 @@ $(document).ready(function() {
                     <span class="gray_p">＞</span>
                     <a class="gray_p" href="./index.html">さて、ここでモンダイです。</a>
                     <span class="gray_p">＞</span>
-                    <p class="gray_p">アプリ基本情報</p>
+                    <p class="gray_p">ガチャ情報</p>
                 </div>
 
                 <table class="simple_t">
@@ -83,118 +83,101 @@ $(document).ready(function() {
                         <p class="person inline">会社側の担当者名：福島　理沙</p>
                         <p class="contact inline"><a class="red_a bold" href="./contact_responsible.html">担当者へ問い合わせ</a></p>
                     </div>
+                    <div class="clearfix"></div>
+                    <div class="statusBox">
+                        <p class="status inline">ガチャステータス</p>
+                        <div class="news-status news-public clearfix" style="float:right;">
+                            <span>公開中</span>
+                            <div class="pub-color"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="edit-form clearfix">
                     <div class="clearfix">
-                        <div class="main-icon">
-                            <img src="img/mainapp.png" alt="メインアイコン">
-                            <a class="click" href="#">アイコンを選択</a><span class="caution">*</span>
-                            <p class="img-text">200px ~ 1024px以内の正方形<br>(JPGまたはPNG形式)</p>
-                        </div>
-                        <div class="input-form">
-                            <table class="input">
+                        <div class="dataBox">
+                            <table class="input" style="float:none;">
                                 <tr>
-                                    <th>アプリ名<span class="caution">*</span></th>
+                                    <th>OS<span class="caution">*</span></th>
                                     <td>さて、ここでモンダイです！</td>
                                 </tr>
                                 <tr>
-                                    <th>AppID<span class="caution">*</span></th>
+                                    <th>特典ID種別</th>
                                     <td>00<td>
                                 </tr>
                                 <tr>
-                                    <th>価格<span class="caution">*</span></th>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <th>予約受付期間</th>
+                                    <th>開始日時</th>
                                     <td><span class="m20float">2015年</span><span class="m20float">8月</span><span class="m20float">1日</span><span class="m20float">〜</span><span class="m20float">2015年</span><span class="m20float">8月</span><span class="m20float">1日</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>リリース予定日<span class="caution">*</span></th>
-                                    <td>調整中</td>
-                                </tr> 
+                                    <th>特典ID利用方法説明文章<br><span class="red_a">(500文字以内)</span></th>
+                                    <td class="tableText">リリース後にこちらの画面で説明</td>
+                                </tr>
                                 <tr>
-                                    <th>リリース通知設定<span class="caution">*</span></th>
-                                    <td>手動</td>
+                                    <th></th>
+                                    <td>現段階で未定の場合はそのまま登録してください。<br>その場合、リリース前までに登録してください。</td>
                                 </tr>
                             </table>
                         </div>
                     </div>
-                    <table class="input bottom">
-                        <tr>
-                            <th>ユーザーからのコメント通知アドレス<span class="caution">*</span></th>
-                            <td>現在のアドレス : example@examlpe.com</td>
-                        </tr>
-                    </table>
                 </div><!-- /.edit-form -->
 
                 <div class="setting-tag clearfix">
-                    <h4 class="squareT">タグの設定</h4>  
-                    <p>
-                    タグを付ける事で、検索に引っかかり易くなります。必ず一つは選択してください。最大６つまで指定できます。<br>
-                    タグには優先順位があります。関連度の高いものから順に選んでください。
-                    </p>
-                    <ul class="row">
-                        <li class="col-xs-4">
-                            ジャンルタグ
-                            <span class="ml20">RPG</span>
-                        </li>
-                        <li class="col-xs-4">
-                            第1タグ
-                            <span class="ml20">RPG</span>
-                        </li>
-                        <li class="col-xs-4">
-                            第2タグ
-                            <span class="ml20">RPG</span>
-                        </li>
-                        <li class="col-xs-4">
-                            第3タグ
-                            <span class="ml20">RPG</span>
-                        </li>
-                        <li class="col-xs-4">
-                            第4タグ
-                            <span class="ml20">RPG</span>
-                        </li>
-                        <li class="col-xs-4">
-                            第5タグ
-                            <span class="ml20">RPG</span>
-                        </li>
-                    </ul>
+                    <h4 class="squareT">特典指定<span class="caution">*</span></h4>  
                 </div><!-- /.setting-tag -->
-                <div class="settingBox">
-                    <h4 class="squareT">スクリーンショット</h4>
-                    <div class="imgBoxA">
-                        <p>1</p>
-                        <img src="img/appimg.png" alt="" style="width:20%;">
-                    </div>
-                    <h4 class="squareT">一覧表示用バナー</h4>
-                    <div class="imgBoxB">
-                        <p>使用する</p>
-                        <img src="img/appbaner.png" alt="" style="width:70%;">
-                    </div>
-                    <h4 class="squareT">アプリ説明文<span class="caution">* </span><span class="red_a" style="font-weight:100;">(2000文字以内)</span></h4>  
-                </div><!-- /.settingBox -->
-                <div class="settingBoxA">
-                    <h4 class="squareT">予約特典</h4>
-                    <div class="reserveBox">
-                        <p>あり</p>
-                        <h5><span class="circle"></span>予約上限数</h5>
-                        <p>設けない</p>
-                        <h5><span class="circle"></span>予約特典ID種別</h5>
-                        <p>ユニークID方式</p>
-                        <h5><span class="circle"></span>予約特典画像</h5>
-                        
-                        <h5><span class="circle"></span>予約特典紹介文章</h5>
-                        <img src="img/apppresent.png" style="margin-left:50px;width:50%;" alt="">
-                        <h5><span class="circle"></span>特典ID利用方法説明文章</h5>
-                        <p>リリース後にこちらの画面で説明</p>
-                    </div>
+                <div class="settingBox" style="border-bottom:none;">
+                    <h4 class="squareT">ノーマルガチャの回数指定</h4>
+                    <table class="simple_t gacha_count">
+                        <tr class="tableTitle">
+                            <td>時間帯</td>
+                            <td>この時間帯の無料回数</td>
+                            <td>シェア出来る回数</td>
+                            <td>この時間の最大回数</td>
+                        </tr>
+                        <tr>
+                            <td>00:00~05:59</td>
+                            <td><span class="count">5</span>回</td>
+                            <td><span class="count">5</span>回</td>
+                            <td>25回</td>
+                        </tr>
+                        <tr>
+                            <td>06:00~11:59</td>
+                            <td><span class="count">5</span>回</td>
+                            <td><span class="count">5</span>回</td>
+                            <td>25回</td>
+                        </tr>
+                        <tr>
+                            <td>12:00~17:59</td>
+                            <td><span class="count">5</span>回</td>
+                            <td><span class="count">5</span>回</td>
+                            <td>25回</td>
+                        </tr>
+                        <tr>
+                            <td>18:00~23:59</td>
+                            <td><span class="count">5</span>回</td>
+                            <td><span class="count">5</span>回</td>
+                            <td>25回</td>
+                        </tr>
+                        <tr>
+                            <td class="border_none"></td>
+                            <td class="border_none"></td>
+                            <td class="border_none"></td>
+                            <td class="back_gray">最大100回</td>
+                        </tr>
+                    </table>
                 </div><!-- /.settingBox -->
                 <div class="button-link next-edit">
                     <a href="#">編集</a>
                 </div>
                 <div class="clearfix" style="margin-top:20px;">
+                    <div class="statusBox">
+                        <p class="status inline">ガチャステータス</p>
+                        <div class="news-status news-public clearfix" style="float:right;">
+                            <span>公開中</span>
+                            <div class="pub-color"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
                     <div class="statusBox">
                         <p class="status inline">ステータス</p>
                         <div class="news-status news-public clearfix" style="float:right;">
