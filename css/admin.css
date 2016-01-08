@@ -124,7 +124,7 @@ form.head_search input[type='text']{
     width:61%;
     margin-right:20px;
 }
-form.head_search input[type="submit"]{
+form.head_search input[type="submit"],.red_submit{
     background-color:#d50000;
     color:#fff;
     border:none;
@@ -206,7 +206,8 @@ td.android{
 .statusBox{
     margin-top: 11px;
     padding: 6px;
-    border: 1px solid #5d5d5d;float:right;
+    border: 1px solid #5d5d5d;
+    float:right;
 }
 .statusBox p.status{
     margin-right:10px;
@@ -281,6 +282,7 @@ table.bottom {
 }
 .setting-tag{
     border-bottom: 1px solid #4d4d4d;
+    padding-bottom:20px;
 }
 .setting-tag ul {
     margin-left: -15px;
@@ -401,5 +403,183 @@ table.dataTable td{
 table.dataTable th{
     padding-bottom:30px;
     padding-right:30px;
+    width:20%;
+}
+.floatR{
+    float:right;
+}
+.floatL{
+    float:left;
+}
+.rightBox{
+    width: 80%;
+    margin-right: 50px;
+}
+.presentBox{
+    margin-top:20px;
+    padding-left:30px;
+}
+table.rareT td,table.rareT th{
+    border:none;
+    width:80px;
+}
+table.rareT{
+    margin-bottom:20px;
+}
+table.presentInfo{
+    width:100%;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+table.presentInfo td{
+    border:none;
+}
+.left1{
+    width:12%;
+}
+.left2{
+    width:24%;
+}
+.left3,.left4{
+    width:33%;
+    padding-right:35px;
+}
+.presentImgBox img{
+    width: 100%;
+    border: 1px solid #aaa;
+}
+.presentSumBox{
+    margin-top:50px;
+    margin-bottom:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: #ffffff;
+    -webkit-background-size: 8px 8px;
+    -moz-background-size: 8px 8px;
+    background-size: 8px 8px;
+    background-position: 0 0, 11px 11px;
+    background-image: -webkit-linear-gradient(45deg, #ccc 25%, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc 75%), -webkit-linear-gradient(-135deg, #ccc 25%, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc 75%);
+    background-image: -moz-linear-gradient(45deg, #ccc 25%, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc 75%), -moz-linear-gradient(-135deg, #ccc 25%, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc 75%);
+    background-image: -ms-linear-gradient(45deg, #ccc 25%, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc 75%), -ms-linear-gradient(-135deg, #ccc 25%, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc 75%);
+    background-image: -o-linear-gradient(45deg, #ccc 25%, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc 75%), -o-linear-gradient(-135deg, #ccc 25%, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc 75%);
+}
+table.presentSum{
+    width:70%;
+}
+table.presentSum td{
+    border-bottom:none;
+    width:50%;
+    text-align:center;
+    font-weight:bold;
+}
+.payBox{
+    width:80%;
+    float:right;
+}
+.payBox table.simple_t{
+    width:65%;
+    float:right;
+}
+.nowPay{
+    margin-top:37px;
+    float:left;
+}
+.nowPay td{
+    border: 2px solid #4d4d4d;
+    padding:10px 15px;
+}
+.registerBtn a{
+    padding:10px 15px;
+    margin-left:10px;
+}
+table.newsRegister{
+    width:100%;
+}
+table.newsRegister th{
+    vertical-align: top;
+}
+span.youtubeurl{
+    margin-left:20px;
+}
+img.in_table{
+    width:50%;
+}
+table.newsRegister input[type="file"]{
+    display:inline;
+    vertical-align:bottom;
+}
+table.newsRegister textarea{
+    width:100%;
+    height:100px;
+}
+.submit_button{
+    display:block;
+    width: 300px;
+    margin-left: auto;
+    background-color: #aa0000;
+    font-weight: 100;
+    font-size: 18px;
+    color: #ffffff;
+    margin: 10px auto;
+    padding: 10px 20px;
+    box-shadow: 0 3px 0 #7b0000;
+    margin-right: auto;
+    border:none;
+}
+.submit_button:hover{
+    margin: 12px auto 8px;
+    box-shadow: 0 1px 0 #7b0000;
+}
+ul.tag_list{
+    padding-left:0;
+    margin-bottom:30px;
+}
+ul.tag_list li:not(.edit_tag){
+    float:left;
+    margin-right:10px;
+    margin-bottom:10px;
+    padding:5px;
     width:15%;
+    color:#767676;
+    background-color:#f2f2f2;
+    border:solid 1px #767676;
+}
+li.edit_tag{
+    float:left;
+    margin-right:10px;
+    margin-bottom:10px;
+    padding:5px;
+    width:60px;
+    text-align:center;
+    background-color: #d50000;
+}
+li.edit_tag a,li.edit_tag:hover{
+    color: #fff;
+}
+form.addtag{
+    margin-bottom:100px;
+}
+form.addtag input[type="text"]{
+    width:300px;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+ul.edit_tag_form li{
+    float:left;
+    margin-right:10px;
+    width:50%;
+}
+span.tagName{
+    padding:5px;
+    margin-right:20px;
+    color:#767676;
+    background-color:#f2f2f2;
+    border:solid 1px #767676;
+}
+form.edit_tag_form li input.tag_delete{
+    margin-left:20px;
+    color: #bb0000;
+    padding:3px 10px;
+    background-color: #fff;
+    border: 2px solid #bb0000;    
 }

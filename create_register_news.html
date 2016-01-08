@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <a class="gray_p" href="./index.html">ニュース配信登録</a>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">新規登録（ユーザー様向け）</p>
+                </div>
+                <form action="./">
+                    <div class="contentBox">
+                        <table class="dataTable newsRegister">
+                            <tr>
+                                <th>タイトル</th>
+                                <td><input type="text" name="newsTitle"></td>
+                            </tr>
+                            <tr>
+                                <th>OS</th>
+                                <td>
+                                    <label><input type="radio" name="os" value="all">両方</label>
+                                    <label><input type="radio" name="os" value="ios">iosのみ</label>
+                                    <label><input type="radio" name="os" value="android">androidのみ</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>開始日時</th>
+                                <td>
+                                    即時
+                                    <span class="m20float ml20">〜</span>
+                                    <select class="year" name="year">
+                                        <option value="">--</option>
+                                    </select>
+                                    <select class="month" name="month">
+                                        <option value="">--</option>
+                                    </select>
+                                    <select class="day" name="day">
+                                        <option value="">--</option>
+                                    </select>
+                                    <p>終了日を設定しない場合は、リリース通知と同時に自動的に予約終了し、掲載が落とされます。</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="vertical-align:top;">ニュース画像</th>
+                                <td>
+                                    <p class="red_a">横：640px * 縦：自由(容量100KB以内/.jpg,.gif)</p>
+                                    <label><input type="radio" name="isUse" value="use">使用する</label>
+                                    <label><input type="radio" name="isUse" value="nouse">使用しない</label>
+                                    <label><input type="radio" name="isUse" value="usemovie">動画</label>
+                                    <span class="youtubeurl">https://www.youtube.com/watch?v=</span><input type="text" name="youtubeID">
+                                    <img class="in_table" src="img/apppresent.png" alt="">
+                                    <input type="file" name="newsImg">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>ニュース内容</th>
+                                <td>
+                                    <textarea name="newsText"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div><!-- ./contentBox -->
+                    <input type="submit" class="submit_button" value="編集">
+                </form>
+            </div><!-- ./main_contents -->
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>
