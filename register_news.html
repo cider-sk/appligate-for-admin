@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.public_sidebar').load('sidebar.html');
+                    });
+                </script>                
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <p class="gray_p">ニュース配信登録</p>
+                </div>
+                <div class="clearfix">
+                    <div class="floatR registerBtn">
+                        <a class="redBox_white" href="./create_register_news.html">新規登録（ユーザー様向け）</a>
+                        <a class="redBox_white" href="./create_register_news.html">新規登録（企業様向け）</a>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div id="myOsTabContent" class="tab-content">
+                        <ul id="osmenu" class="nav nav-tabs submenu">
+                            <li class="active"><a href="#ostab1" data-toggle="tab">ユーザー様向け</a></li>
+                            <li><a href="#ostab2" data-toggle="tab">企業様向け</a></li>
+                        </ul>
+                        <div class="tab-pane fade in active" id="ostab1">
+                            <div class="pagenav">
+                                <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
+                                <a href="#"><span class="current">1</span></a>
+                                <a href="#"><span>2</span></a>
+                                <a href="#"><span>3</span></a>
+                                ・・・
+                                <a href="#"><span>25</span></a>
+                                <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
+                            </div><!-- ./pagenav -->
+                            <div class="clearfix"></div>
+
+                            <table class="simple_t">
+                                <tr class="tableTitle">
+                                    <td style="width:2%;">日付<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:7%;">OS<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:20%;">タイトル<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:11%;">ステータス<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:20%;">IMP<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:20%;">ページビュー数<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:12%;">リンク</td>
+                                </tr>
+                                <tr>
+                                    <td>2015/12/01</td>
+                                    <td class="ios">iOS</td>
+                                    <td><a class="black_a bold" href="./register_news_single.html">登録キャンペーン実施中！</a></td>
+                                    <td>
+                                        <div class="news-status news-private clearfix">
+                                            <span>非公開</span>
+                                            <div class="pri-color"></div>
+                                        </div>
+                                    </td>
+                                    <td>000,000,000</td>
+                                    <td>000,000,000</td>
+                                    <td><a href="#">ページを開く</a></td>
+                                </tr>
+                            </table>
+                            <div class="pagenav">
+                                <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
+                                <a href="#"><span class="current">1</span></a>
+                                <a href="#"><span>2</span></a>
+                                <a href="#"><span>3</span></a>
+                                ・・・
+                                <a href="#"><span>25</span></a>
+                                <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
+                            </div><!-- ./pagenav -->
+                        </div><!-- /#ostab1 -->
+                        <div class="tab-pane fade" id="ostab2">
+                            <div class="pagenav">
+                                <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
+                                <a href="#"><span class="current">1</span></a>
+                                <a href="#"><span>2</span></a>
+                                <a href="#"><span>3</span></a>
+                                ・・・
+                                <a href="#"><span>25</span></a>
+                                <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
+                            </div><!-- ./pagenav -->
+                            <div class="clearfix"></div>
+
+                            <table class="simple_t">
+                                <tr class="tableTitle">
+                                    <td style="width:2%;">日付<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:7%;">OS<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:20%;">タイトル<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:11%;">ステータス<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:20%;">IMP<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:20%;">ページビュー数<a class="sort_btn" href="#"></a></td>
+                                    <td style="width:12%;">リンク</td>
+                                </tr>
+                                <tr>
+                                    <td>2015/12/01</td>
+                                    <td class="ios">iOS</td>
+                                    <td><a class="black_a bold" href="./app_single.html">さてここでモンダイです</a></td>
+                                    <td>
+                                        <div class="news-status news-private clearfix">
+                                            <span>非公開</span>
+                                            <div class="pri-color"></div>
+                                        </div>
+                                    </td>
+                                    <td>000,000,000</td>
+                                    <td>000,000,000</td>
+                                    <td><a href="#">ページを開く</a></td>
+                                </tr>
+                            </table>
+                            <div class="pagenav">
+                                <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
+                                <a href="#"><span class="current">1</span></a>
+                                <a href="#"><span>2</span></a>
+                                <a href="#"><span>3</span></a>
+                                ・・・
+                                <a href="#"><span>25</span></a>
+                                <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
+                            </div><!-- ./pagenav -->
+                        </div><!-- /#subtab2 -->
+                    </div><!-- /#myOsTabContent -->
+                </div>
+            </div>
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.public_sidebar').load('sidebar.html');
+                    });
+                </script>
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <p class="gray_p">タグ編集・追加</p>
+                </div>
+                <div class="contentBox">
+                    <form class="addtag" action="./">
+                        <h4 class="gray_p">タグ追加</h4>
+                        <input type="text" name="addtag">
+                        <label><input type="radio" name="tagtype" value="genre">ジャンルタグ</label>
+                        <label><input type="radio" name="tagtype" value="attribute">属性タグ</label>
+                        <br/>
+                        <input class="red_submit" type="submit" value="追加">
+                    </form>
+                    <h4 class="gray_p" style="margin-bottom:20px;">現在のタグ一覧</h4>
+                    <p class="gray_p">ジャンルタグ</p>
+                    <ul class="tag_list clearfix">
+                        <li>RPG</li>
+                        <li>アクション</li>
+                        <li>ミュージック</li>
+                        <li>教育</li>
+                        <li>ツール</li>
+                        <li>カジノ</li>
+                        <li>シミュレーション</li>
+                        <li>脱出</li>
+                        <li>アドベンチャー</li>
+                        <li class="edit_tag"><a href="./edit_tag_form.html">編集</a></li>
+                    </ul>
+                    <p class="gray_p">属性タグ</p>
+                    <ul class="tag_list clearfix">
+                        <li>RPG</li>
+                        <li>アクション</li>
+                        <li>ミュージック</li>
+                        <li>教育</li>
+                        <li>ツール</li>
+                        <li>カジノ</li>
+                        <li>シミュレーション</li>
+                        <li>脱出</li>
+                        <li>アドベンチャー</li>
+                        <li class="edit_tag"><a href="./edit_tag_form.html">編集</a></li>
+                    </ul>
+                </div>           
+            </div>
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

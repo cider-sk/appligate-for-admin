@@ -40,47 +40,36 @@ $(document).ready(function() {
                     </form>
                 </div>
                 <div class="breadcrumb">
-                    <a class="gray_p" href="./index.html">公開中アプリ一覧（事前予約）</a>
-                    <span class="gray_p">＞</span>
-                    <a class="gray_p" href="./index.html">配信ニュース一覧</a>
+                    <a class="gray_p" href="./index.html">ニュース配信登録</a>
                     <span class="gray_p">＞</span>
                     <p class="gray_p">ニュース記事詳細</p>
                 </div>
 
                 <table class="simple_t">
                     <tr class="tableTitle">
-                        <td style="width:6%;">ID</td>
-                        <td style="width:8%;">登録日</td>
-                        <td style="width:18%;">アプリ</td>
-                        <td style="width:7%;">OS</td>
-                        <td style="width:18%;">会社名</td>
-                        <td>特典</td>
-                        <td>ガチャ</td>
-                        <td>予約・特典ページビュー数</td>
-                        <td>リンク</td>
+                        <td style="width:2%;">日付<a class="sort_btn" href="#"></a></td>
+                        <td style="width:7%;">OS<a class="sort_btn" href="#"></a></td>
+                        <td style="width:20%;">タイトル<a class="sort_btn" href="#"></a></td>
+                        <td style="width:11%;">ステータス<a class="sort_btn" href="#"></a></td>
+                        <td style="width:20%;">IMP<a class="sort_btn" href="#"></a></td>
+                        <td style="width:20%;">ページビュー数<a class="sort_btn" href="#"></a></td>
+                        <td style="width:12%;">リンク</td>
                     </tr>
                     <tr>
-                        <td>00001</td>
-                        <td>12/01</td>
-                        <td><a class="black_a bold" href="./app_single.html">さてここでモンダイです</a></td>
+                        <td>2015/12/01</td>
                         <td class="ios">iOS</td>
-                        <td><a class="black_a" href="./com_single.html">さてここでモンダイです</a></td>
-                        <td>有</td>
-                        <td>有</td>
-                        <td>000,000,000,000</td>
+                        <td><a class="black_a bold" href="./register_news_single.html">登録キャンペーン実施中！</a></td>
+                        <td>
+                            <div class="news-status news-private clearfix">
+                                <span>非公開</span>
+                                <div class="pri-color"></div>
+                            </div>
+                        </td>
+                        <td>000,000,000</td>
+                        <td>000,000,000</td>
                         <td><a href="#">ページを開く</a></td>
                     </tr>
                 </table>
-                <div class="clearfix" style="margin-top:20px;">
-                    <div class="linkBox">
-                        <a class="whiteBox_red mr20" href="./app_news_list.html">このアプリのニュース一覧</a>
-                        <a class="whiteBox_red" href="./com_news_list.html">この企業様のニュース一覧</a>
-                    </div>
-                    <div class="responsible">
-                        <p class="person inline">会社側の担当者名：福島　理沙</p>
-                        <p class="contact inline"><a class="red_a bold" href="./contact_responsible.html">担当者へ問い合わせ</a></p>
-                    </div>
-                </div>
                 <div class="contentBox">
                     <table class="dataTable">
                         <tr>
@@ -107,17 +96,7 @@ $(document).ready(function() {
                     </table>
                 </div><!-- ./contentBox -->    
                 <div class="button-link next-edit">
-                    <a href="#">編集</a>
-                </div>
-                <div class="clearfix" style="margin-top:20px;">
-                    <div class="linkBox">
-                        <a class="whiteBox_red mr20" href="./app_news_list.html">このアプリのニュース一覧</a>
-                        <a class="whiteBox_red" href="./com_news_list.html">この企業様のニュース一覧</a>
-                    </div>
-                    <div class="responsible">
-                        <p class="person inline">会社側の担当者名：福島　理沙</p>
-                        <p class="contact inline"><a class="red_a bold" href="./contact_responsible.html">担当者へ問い合わせ</a></p>
-                    </div>
+                    <a href="./edit_register_news.html">編集</a>
                 </div>
             </div><!-- ./main_contents -->
         </div><!-- /.container -->

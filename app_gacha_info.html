@@ -123,8 +123,128 @@ $(document).ready(function() {
                 </div><!-- /.edit-form -->
 
                 <div class="setting-tag clearfix">
-                    <h4 class="squareT">特典指定<span class="caution">*</span></h4>  
+                    <h4 class="squareT floatL">特典指定<span class="caution">*</span></h4>
+                    <div class="rightBox floatR">
+                        <p class="red_a">画像はW640px*H900px~1200px(容量100K以内のjpgまたはPNG形式) 画像は1枚以上設定してください。<br>
+                        レア度の表示は、1が一番高く、4が一番低くなります。同一レアがある場合は、確率が低い方が上位に表示されます。必ず4種類以上のレア度を設けてください。</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="presentBox">
+                        <table class="rareT">
+                            <tr>
+                                <th>特典1</th>
+                                <td>レア度</td>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                        <p class="red_a">必ず1枚以上の画像を指定してください。</p>
+                        <table class="presentInfo">
+                            <tr>
+                                <td class="left1">レア度の名称</td>
+                                <td class="left2">ハイパーレア</td>
+                                <td class="left3">ノーマル時の出現確率<span class="floatR">25<span class="ml20">%</span></span></td>
+                                <td class="left4">レア時の出現確率<span class="floatR">25<span class="ml20">%</span></span></td>
+                            </tr>
+                        </table>
+                        <div class="presentImgBox row">
+                            <div class="col-xs-2">
+                                <img src="img/present1.png" alt="">
+                            </div>
+                            <div class="col-xs-2">
+                                <img src="img/present1.png" alt="">
+                            </div>
+                        </div>
+                    </div><!-- ./presentBox -->
+                    <div class="presentBox">
+                        <table class="rareT">
+                            <tr>
+                                <th>特典2</th>
+                                <td>レア度</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+                        <p class="red_a">必ず1枚以上の画像を指定してください。</p>
+                        <table class="presentInfo">
+                            <tr>
+                                <td class="left1">レア度の名称</td>
+                                <td class="left2">スーパーレア</td>
+                                <td class="left3">ノーマル時の出現確率<span class="floatR">25<span class="ml20">%</span></span></td>
+                                <td class="left4">レア時の出現確率<span class="floatR">75<span class="ml20">%</span></span></td>
+                            </tr>
+                        </table>
+                        <div class="presentImgBox row">
+                            <div class="col-xs-2">
+                                <img src="img/present1.png" alt="">
+                            </div>
+                            <div class="col-xs-2">
+                                <img src="img/present1.png" alt="">
+                            </div>
+                        </div>
+                    </div><!-- ./presentBox -->
+                    <div class="presentBox">
+                        <table class="rareT">
+                            <tr>
+                                <th>特典3</th>
+                                <td>レア度</td>
+                                <td>3</td>
+                            </tr>
+                        </table>
+                        <p class="red_a">必ず1枚以上の画像を指定してください。</p>
+                        <table class="presentInfo">
+                            <tr>
+                                <td class="left1">レア度の名称</td>
+                                <td class="left2">レア</td>
+                                <td class="left3">ノーマル時の出現確率<span class="floatR">25<span class="ml20">%</span></span></td>
+                                <td class="left4">レア時の出現確率<span class="floatR"><span class="ml20">%</span></span></td>
+                            </tr>
+                        </table>
+                        <div class="presentImgBox row">
+                            <div class="col-xs-2">
+                                <img src="img/present1.png" alt="">
+                            </div>
+                            <div class="col-xs-2">
+                                <img src="img/present1.png" alt="">
+                            </div>
+                        </div>
+                    </div><!-- ./presentBox -->
+                    <div class="presentBox">
+                        <table class="rareT">
+                            <tr>
+                                <th>特典4</th>
+                                <td>レア度</td>
+                                <td>4</td>
+                            </tr>
+                        </table>
+                        <p class="red_a">必ず1枚以上の画像を指定してください。</p>
+                        <table class="presentInfo">
+                            <tr>
+                                <td class="left1">レア度の名称</td>
+                                <td class="left2">ノーマル</td>
+                                <td class="left3">ノーマル時の出現確率<span class="floatR">25<span class="ml20">%</span></span></td>
+                                <td class="left4">レア時の出現確率<span class="floatR"><span class="ml20">%</span></span></td>
+                            </tr>
+                        </table>
+                        <div class="presentImgBox row">
+                            <div class="col-xs-2">
+                                <img src="img/present1.png" alt="">
+                            </div>
+                            <div class="col-xs-2">
+                                <img src="img/present1.png" alt="">
+                            </div>
+                        </div>
+                    </div><!-- ./presentBox -->
+                    <div class="presentSumBox">
+                        <table class="presentSum">
+                            <tr>
+                                <td class="left3">ノーマル時の出現確率<span class="floatR"><span class="red_a">100</span><span class="ml20">%</span></span></td>
+                                <td class="left4">レア時の出現確率<span class="floatR"><span class="red_a">100</span><span class="ml20">%</span></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p class="red_a">全ての合計が100%になるように設定してください。<br>
+                    一度出稿すると、特典を追加することはできますが、既にあるものを編集・削除することはできません。ご注意ください。</p>
                 </div><!-- /.setting-tag -->
+                
                 <div class="settingBox" style="border-bottom:none;">
                     <h4 class="squareT">ノーマルガチャの回数指定</h4>
                     <table class="simple_t gacha_count">
