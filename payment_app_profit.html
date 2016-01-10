@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <a class="gray_p" href="./payment.html">支払</a>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">登録アプリの収益</p>
+                </div>
+                <table class="simple_t">
+                    <tr class="tableTitle">
+                        <td style="width:8%;">対象月<a class="sort_btn" href="#"></a></td>
+                        <td style="width:20%;">会社名<a class="sort_btn" href="#"></a></td>
+                        <td style="width:10%;">登録アプリ<a class="sort_btn" href="#"></a></td>
+                        <td style="width:20%;">レアガチャ回転数<a class="sort_btn" href="#"></a></td>
+                        <td style="width:20%;">お支払金額<a class="sort_btn" href="#"></a></td>
+                        <td style="width:11%;">ステータス<a class="sort_btn" href="#"></a></td>
+                        <td style="width:11%;">振込先</td>
+                    </tr>
+                    <tr>
+                        <td>12月</td>
+                        <td><a class="black_a bold" href="./app_single.html">さてここでモンダイです</a></td>
+                        <td><a class="black_a bold" href="./payment_app_profit.html">10本</a></td>
+                        <td>000,000,000</td>
+                        <td>000,000,000</td>
+                        <td>
+                            <div class="news-status news-public clearfix">
+                                <span>未支払</span>
+                                <div class="pub-color"></div>
+                            </div>
+                        </td>
+                        <td><a href="payment_info.html">振込先情報</a></td>
+                    </tr>
+                </table>
+                <div class="contentBox">
+                    <div class="period clearfix">
+                        <h4>期間限定</h4>
+                        <p>期間</p>
+                        <form method="post" action="#">
+                            <input type="date" name="startDate">
+                            <span style="margin-right:20px;">〜</span>
+                            <input type="date" name="endDate">
+                            <input type="submit" class="submit_button refine" value="絞り込み">
+                        </form>
+                        <a class="setday" href="#">開始日〜当日に設定する</a>
+                    </div><!-- /.period -->
+                    <div class="button-link csv">
+                        <a href="#">CSV出力</a>
+                    </div>
+                    <div class="button-link csv mr20">
+                        <a href="#">PDF出力</a>
+                    </div>
+                    <table class="report">
+                        <tr class="title">
+                            <td style="width:30%;">アプリ名</td>
+                            <td style="width:10%;">OS</td>
+                            <td style="width:40%;">月利用回数</td>
+                            <td>収益額</td>
+                        </tr>
+                        <tr class="value">
+                            <td>前月繰越し額</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="value">
+                            <td><a href="./app_single.html">さて、ここでモンダイです</a></td>
+                            <td>iOS</td>
+                            <td>10</td>
+                            <td>200</td>
+                        </tr>
+                        <tr class="sum value">
+                            <td>合計</td>
+                            <td></td>
+                            <td>10</td>
+                            <td>200</td>
+                        </tr>
+                    </table>
+                    <div class="paymentBottomBox">
+                        <div class="clearfix">
+                            <table class="nowPay" style="float:right;">
+                                <tr>
+                                    <th>支払暫定額</th>
+                                    <td>0円</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="clearfix">
+                            <table class="nowPay" style="float:right;">
+                                <tr>
+                                    <th>繰越し額</th>
+                                    <td>4000円</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="clearfix">
+                            <table class="nowPay" style="float:none;">
+                                <tr>
+                                    <th>現在のお支払額</th>
+                                    <td>1DL = 40円</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div><!-- ./contentBox -->    
+            </div><!-- ./main_contents -->
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

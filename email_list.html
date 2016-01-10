@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>                
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <p class="gray_p">メール編集</p>
+                </div>
+                <div class="clearfix">
+                    <div class="clearfix">
+                        <div class="floatR registerBtnB">
+                            <a class="redBox_white" href="./edit_advertise.html">新規登録</a>
+                        </div>
+                    </div>
+                    <div class="pagenav">
+                        <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
+                        <a href="#"><span class="current">1</span></a>
+                        <a href="#"><span>2</span></a>
+                        <a href="#"><span>3</span></a>
+                        ・・・
+                        <a href="#"><span>25</span></a>
+                        <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
+                    </div><!-- ./pagenav -->
+                    <div class="clearfix"></div>
+
+                    <table class="simple_t">
+                        <tr class="tableTitle">
+                            <td style="width:10%;">日付<a class="sort_btn" href="#"></a></td>
+                            <td style="width:7%;">OS<a class="sort_btn" href="#"></a></td>
+                            <td style="width:20%;">タイトル</td>
+                            <td style="width:20%;">本文<a class="sort_btn" href="#"></a></td>
+                            <td style="width:10%;">ステータス<a class="sort_btn" href="#"></a></td>
+                            <td style="width:10%;">削除<a class="sort_btn" href="#"></a></td>
+                            <td style="width:10%;">編集</td>
+                            <td style="width:10%;">クリック率</td>
+                        </tr>
+                        <tr>
+                            <td>2015<br/>12/20</td>
+                            <td class="android">android</td>
+                            <td><a class="black_a bold" href="./app_single.html">登録キャンペーン実施中</a></td>
+                            <td><a class="gray_p"href="#">ああああああああああああああ...</a></td>
+                            <td><a class="now_Release" href="#">配信中</a></td>
+                            <td><a class="delete_email" href="#">削除</a></td>
+                            <td><a href="./edit_email.html">編集</a></td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>2015<br/>12/20</td>
+                            <td class="android">android</td>
+                            <td><a class="black_a bold" href="./app_single.html">登録キャンペーン実施中</a></td>
+                            <td><a class="gray_p"href="#">ああああああああああああああ...</a></td>
+                            <td><a class="no_Release" href="#">未信中</a></td>
+                            <td><a class="delete_email" href="#">削除</a></td>
+                            <td><a href="./edit_email.html">編集</a></td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>2015<br/>12/20</td>
+                            <td class="ios">iOS</td>
+                            <td><a class="black_a bold" href="./app_single.html">登録キャンペーン実施中</a></td>
+                            <td><a class="gray_p"href="#">ああああああああああああああ...</a></td>
+                            <td><a class="now_Release" href="#">配信中</a></td>
+                            <td><a class="delete_email" href="#">削除</a></td>
+                            <td><a href="./edit_email.html">編集</a></td>
+                            <td>10%</td>
+                        </tr>
+                    </table>
+                    <div class="pagenav">
+                        <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
+                        <a href="#"><span class="current">1</span></a>
+                        <a href="#"><span>2</span></a>
+                        <a href="#"><span>3</span></a>
+                        ・・・
+                        <a href="#"><span>25</span></a>
+                        <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
+                    </div><!-- ./pagenav -->
+                </div>
+            </div>
+        </div><!-- /.container -->
+        <script>
+            $(function(){
+                $('a.delete_email').click(function(){
+                    if (confirm('メールを削除しますか？')) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+            });
+        </script>
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -16,6 +16,9 @@ body {
     margin:auto;
     padding-left:0;
 }
+input[type="text"]{
+    width:50%;
+}
 header{
     margin: 0 -500%;
     padding: 15px 500%; 
@@ -241,7 +244,7 @@ ul.app_information li{
 .topTab li a{
     border:1px solid #ccc!important;
 }
-#subtab2{
+.mT-20{
     margin-top: -50px;
 }
 table.report td.border-none{
@@ -477,16 +480,24 @@ table.presentSum td{
     float:right;
 }
 .payBox table.simple_t{
-    width:65%;
+    width:55%;
     float:right;
 }
 .nowPay{
     margin-top:37px;
     float:left;
 }
-.nowPay td{
+.nowPay td,.nowPay th{
+    min-width:150px;
     border: 2px solid #4d4d4d;
     padding:10px 15px;
+}
+.nowPay td{
+    border-left:none;
+}
+.nowPay th{
+    border-right: 3px solid #4d4d4d;
+    border-right-style: dotted;
 }
 .registerBtn a{
     padding:10px 15px;
@@ -564,22 +575,146 @@ form.addtag input[type="text"]{
     margin-right:10px;
     margin-bottom:10px;
 }
-ul.edit_tag_form li{
-    float:left;
-    margin-right:10px;
-    width:50%;
+ul.edit_tag{
+    width:100%;
+    margin-bottom:100px;
+}
+ul.edit_tag li{
+    margin-bottom:10px;
 }
 span.tagName{
+    width:40%;
+    display: inline-block;
     padding:5px;
     margin-right:20px;
     color:#767676;
     background-color:#f2f2f2;
     border:solid 1px #767676;
 }
-form.edit_tag_form li input.tag_delete{
+form.edit_tag_form li a.tag_delete{
     margin-left:20px;
     color: #bb0000;
-    padding:3px 10px;
+    padding:5px 10px;
     background-color: #fff;
     border: 2px solid #bb0000;    
+}
+.inline{
+    display:inline;
+}
+.registerBtnB a{
+    padding:10px 50px;
+}
+.no_Release,.no_Release:hover{
+    color:#ff00c4;
+}
+.now_Release,.now_Release:hover{
+    color:#cc1d33;
+}
+.end_Release,.end_Release:hover{
+    color:#413a37;
+}
+.edit_email select.year{
+    margin-left:10px;
+}
+.edit_email select.day{
+    margin-right:20px;
+}
+#topRightBox table td{
+   padding:15px 10px!important;
+   width:auto;
+}
+#topRightBox table col.left,#topRightBox table col.right {
+    width: auto;
+}
+ul#osmenu2 li,ul#osmenu3 li {
+    border: 2px solid #4d4d4d;
+    width: 15%;
+}
+#osmenu2 li.active a, #osmenu2 li.active a:hover, #osmenu2 li.active a:focus,
+#osmenu3 li.active a, #osmenu3 li.active a:hover, #osmenu3 li.active a:focus {
+    background-color: #fff!important;
+    color: #000;
+}
+#osmenu2 li a, #osmenu2 li a:hover,
+#osmenu3 li a, #osmenu3 li a:hover{
+    padding: 5px;
+    background-color: #4d4d4d;
+    color: #fff;
+    border: none;
+}
+.reportPage table tr.last-tr{
+    background-color:#ccc;
+}
+.companyTopRightBox .linkBox{
+    margin-top:77px;
+}
+form.contactForm{
+    margin-top:50px;
+    padding-left:50px;
+}
+table.formTable{
+    width:80%;
+}
+table.formTable th{
+    width:10%;
+    text-align:right;
+    padding-bottom:20px;
+}
+table.formTable td{
+    width:80%;
+    border:none;
+    padding-bottom:20px;
+    padding-left:20px;
+}
+form.contactForm input[type="text"],form.contactForm textarea{
+    width:90%;
+}
+form.contactForm input[type="submit"]{
+    width:300px;
+}
+.textTitleCel{
+    vertical-align:top;
+}
+.sendTo a{
+    margin-left:5px;
+    font-weight:bold;
+    color:#666;
+}
+.sendTo a:hover{
+    text-decoration:none;
+}
+.sendTo input{
+    margin-bottom:10px;
+}
+input[type="date"]{
+    margin-left:5px;
+    margin-right:20px;
+}
+input[disabled="disabled"]{
+    background-color:#FFF8E1;
+    color: #000;
+}
+input.refine{
+    background-color: #666;
+    font-weight: 100;
+    font-size: 18px;
+    color: #ffffff;
+    margin: 10px auto;
+    padding: 5px 20px;
+    box-shadow: 0 3px 0 #4d4d4d;
+    width:200px;
+}
+input.refine:hover{
+        margin: 12px auto 8px;
+    box-shadow: 0 1px 0 #4d4d4d;
+}
+.refineBox{
+    margin-bottom:10px;
+}
+.refineSubmit{
+    float:right;
+    margin-top:-50px;
+}
+.paymentBottomBox .nowPay {
+    margin-top: 10px;
 }

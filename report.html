@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <p class="gray_p">レポート</p>
+                </div>
+                <div id="topRightBox" class="clearfix">
+                    <div class="favorite-num comment-num">
+                        <table class="favorite">
+                            <col span="2" class="left">
+                            <col class="right">
+                            <tr class="title">
+                                <td class="t-left"></td>
+                                <td class="t-left">iOS</td>
+                                <td class="t-right">android</td>
+                            </tr>
+                            <tr>
+                                <td class="bold">登録者数</td>
+                                <td>000,000,000</td>
+                                <td>000,000,000</td>
+                            </tr>
+                        </table>
+                    </div><!-- /.favorite-num -->
+                    <div class="clearfix"></div>
+                    <div class="favorite-num comment-num">
+                        <table class="favorite floatL mr20">
+                            <col span="2" class="left">
+                            <col class="right">
+                            <tr class="title">
+                                <td class="t-left"></td>
+                                <td class="t-left">iOS</td>
+                                <td class="t-right">android</td>
+                            </tr>
+                            <tr>
+                                <td class="bold">公開中アプリ数</td>
+                                <td>000,000,000</td>
+                                <td>000,000,000</td>
+                            </tr>
+                        </table>
+                        <table class="favorite">
+                            <col span="2" class="left">
+                            <col class="right">
+                            <tr class="title">
+                                <td class="t-left"></td>
+                                <td class="t-left">iOS</td>
+                                <td class="t-right">android</td>
+                            </tr>
+                            <tr>
+                                <td class="bold">ガチャ登録アプリ数</td>
+                                <td>000,000,000</td>
+                                <td>000,000,000</td>
+                            </tr>
+                        </table>
+                    </div><!-- /.favorite-num -->
+                </div><!-- #/toprightBox -->
+                <ul class="nav nav-tabs submenu topTab">
+                    <li class="active"><a href="#subtab1" data-toggle="tab">ユーザー数</a></li>
+                    <li><a href="#subtab2" data-toggle="tab">予約件数</a></li>
+                    <li><a href="#subtab3" data-toggle="tab">収益</a></li>
+                </ul>
+                <div id="mySubTabContent" class="tab-content reportPage">
+                    <div class="tab-pane fade in active" id="subtab1">
+                        <div class="period clearfix">
+                            <h4>期間限定</h4>
+                            <p>期間</p>
+                            <form method="post" action="#">
+                                <select class="year" name="year">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="month" name="month">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="day" name="day">
+                                    <option value="">--</option>
+                                </select>
+                                <span style="margin:10px;">〜</span>
+                                <select class="year endyear" name="endyear">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="month endmonth"name="endmonth">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="day endday" name="endday">
+                                    <option value="">--</option>
+                                </select>
+                                <div class="button-link refine">
+                                    <a href="#">絞り込み</a>
+                                </div>
+                            </form>
+                            <a class="setday" href="#">開始日〜当日に設定する</a>
+                        </div><!-- /.period -->
+                        <div class="button-link csv">
+                            <a href="#">CSV出力</a>
+                        </div>
+                        <div id="myOsTabContent" class="tab-content">
+                            <ul id="osmenu" class="nav nav-tabs submenu">
+                                <li class="active"><a href="#ostab1" data-toggle="tab">すべて</a></li>
+                                <li><a href="#ostab2" data-toggle="tab">iOS</a></li>
+                                <li><a href="#ostab3" data-toggle="tab">android</a></li>
+                            </ul>
+                            <div class="tab-pane fade in active" id="ostab1">
+                                <table class="simple_t">
+                                    <tr class="tableTitle">
+                                        <td>日付</td>
+                                        <td>新規登録</td>
+                                        <td>再訪問数</td>
+                                        <td>サイトへの総訪問ユーザー</td>
+                                        <td>退会数</td>
+                                        <td>アクティブユーザー数</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015<br>12/01</td>
+                                        <td>00000</td>
+                                        <td>00000</td>
+                                        <td>000,000,000</td>
+                                        <td>00</td>
+                                        <td>000,000,000</td>
+                                    </tr>
+                                    <tr class="last-tr">
+                                        <td>合計</td>
+                                        <td>00000</td>
+                                        <td>00000</td>
+                                        <td>000,000,000</td>
+                                        <td>00</td>
+                                        <td>000,000,000</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /#ostab1 -->
+                            <div class="tab-pane fade" id="ostab2">
+                                <table class="simple_t">
+                                    <tr class="tableTitle">
+                                        <td>日付</td>
+                                        <td>新規登録</td>
+                                        <td>再訪問数</td>
+                                        <td>サイトへの総訪問ユーザー</td>
+                                        <td>退会数</td>
+                                        <td>アクティブユーザー数</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015<br>12/01</td>
+                                        <td>00000</td>
+                                        <td>00000</td>
+                                        <td>000,000,000</td>
+                                        <td>00</td>
+                                        <td>000,000,000</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /#osbtab2 -->
+                            <div class="tab-pane fade" id="ostab3">
+                                <table class="simple_t">
+                                    <tr class="tableTitle">
+                                        <td>日付</td>
+                                        <td>新規登録</td>
+                                        <td>再訪問数</td>
+                                        <td>サイトへの総訪問ユーザー</td>
+                                        <td>退会数</td>
+                                        <td>アクティブユーザー数</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015<br>12/01</td>
+                                        <td>00000</td>
+                                        <td>00000</td>
+                                        <td>000,000,000</td>
+                                        <td>00</td>
+                                        <td>000,000,000</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /#ostab3 -->
+                        </div><!-- /#myOsTabContent -->
+                    </div><!-- /#subtab1 -->
+                    <div class="tab-pane fade" id="subtab2">
+                        <div class="period clearfix">
+                            <h4>期間限定</h4>
+                            <p>期間</p>
+                            <form method="post" action="#">
+                                <select class="year" name="year">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="month" name="month">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="day" name="day">
+                                    <option value="">--</option>
+                                </select>
+                                <span style="margin:10px;">〜</span>
+                                <select class="year endyear" name="endyear">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="month endmonth"name="endmonth">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="day endday" name="endday">
+                                    <option value="">--</option>
+                                </select>
+                                <div class="button-link refine">
+                                    <a href="#">絞り込み</a>
+                                </div>
+                            </form>
+                            <a class="setday" href="#">開始日〜当日に設定する</a>
+                        </div><!-- /.period -->
+                        <div class="button-link csv">
+                            <a href="#">CSV出力</a>
+                        </div>
+                        <div id="myOsTabContent2" class="tab-content">
+                            <ul id="osmenu2" class="nav nav-tabs submenu">
+                                <li class="active"><a href="#ostab2-1" data-toggle="tab">すべて</a></li>
+                                <li><a href="#ostab2-2" data-toggle="tab">iOS</a></li>
+                                <li><a href="#ostab2-3" data-toggle="tab">android</a></li>
+                            </ul>
+                            <div class="tab-pane fade in active" id="ostab2-1">
+                                <table class="simple_t">
+                                    <tr class="tableTitle">
+                                        <td>日付</td>
+                                        <td>アクティブユーザー数</td>
+                                        <td>一人当たりの平均閲覧数</td>
+                                        <td>総予約件数</td>
+                                        <td>一人当たりの平均予約件数</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015<br>12/01</td>
+                                        <td>00000</td>
+                                        <td>00</td>
+                                        <td>000,000,000</td>
+                                        <td>000,000,000</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /#ostab1 -->
+                            <div class="tab-pane fade" id="ostab2-2">
+                                <table class="simple_t">
+                                    <tr class="tableTitle">
+                                        <td>日付</td>
+                                        <td>アクティブユーザー数</td>
+                                        <td>一人当たりの平均閲覧数</td>
+                                        <td>総予約件数</td>
+                                        <td>一人当たりの平均予約件数</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015<br>12/01</td>
+                                        <td>00000</td>
+                                        <td>00</td>
+                                        <td>000,000,000</td>
+                                        <td>000,000,000</td>
+                                    </tr>
+                                </table>       
+                            </div><!-- /#osbtab2 -->
+                            <div class="tab-pane fade" id="ostab2-3">
+                                <table class="simple_t">
+                                    <tr class="tableTitle">
+                                        <td>日付</td>
+                                        <td>アクティブユーザー数</td>
+                                        <td>一人当たりの平均閲覧数</td>
+                                        <td>総予約件数</td>
+                                        <td>一人当たりの平均予約件数</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015<br>12/01</td>
+                                        <td>00000</td>
+                                        <td>00</td>
+                                        <td>000,000,000</td>
+                                        <td>000,000,000</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /#ostab3 -->
+                        </div><!-- /#myOsTabContent -->
+                    </div><!-- /#subtab2 -->
+                    <div class="tab-pane fade" id="subtab3">
+                        <div class="period clearfix">
+                            <h4>期間限定</h4>
+                            <p>期間</p>
+                            <form method="post" action="#">
+                                <select class="year" name="year">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="month" name="month">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="day" name="day">
+                                    <option value="">--</option>
+                                </select>
+                                <span style="margin:10px;">〜</span>
+                                <select class="year endyear" name="endyear">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="month endmonth"name="endmonth">
+                                    <option value="">--</option>
+                                </select>
+                                <select class="day endday" name="endday">
+                                    <option value="">--</option>
+                                </select>
+                                <div class="button-link refine">
+                                    <a href="#">絞り込み</a>
+                                </div>
+                            </form>
+                            <a class="setday" href="#">開始日〜当日に設定する</a>
+                        </div><!-- /.period -->
+                        <div class="button-link csv">
+                            <a href="#">CSV出力</a>
+                        </div>
+                        <div id="myOsTabContent3" class="tab-content">
+                            <ul id="osmenu3" class="nav nav-tabs submenu">
+                                <li class="active"><a href="#ostab3-1" data-toggle="tab">すべて</a></li>
+                                <li><a href="#ostab3-2" data-toggle="tab">iOS</a></li>
+                                <li><a href="#ostab3-3" data-toggle="tab">android</a></li>
+                            </ul>
+                            <div class="tab-pane fade in active" id="ostab3-1">
+                                <table class="simple_t">
+                                    <tr class="tableTitle">
+                                        <td rowspan="2">日付</td>
+                                        <td colspan="2">ノーマルガチャ</td>
+                                        <td colspan="3">レアガチャ</td>
+                                    </tr>
+                                    <tr class="tableTitle">
+                                        <td>回転人数</td>
+                                        <td>回転数</td>
+                                        <td>回転人数</td>
+                                        <td>回転数</td>
+                                        <td>収益額</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015<br>12/01</td>
+                                        <td>00000</td>
+                                        <td>00000</td>
+                                        <td>000,000,000</td>
+                                        <td>00</td>
+                                        <td>000,000,000</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /#ostab1 -->
+                            <div class="tab-pane fade" id="ostab3-2">
+                                <table class="simple_t">
+                                    <tr class="tableTitle">
+                                        <td>日付</td>
+                                        <td>新規登録</td>
+                                        <td>再訪問数</td>
+                                        <td>サイトへの総訪問ユーザー</td>
+                                        <td>退会数</td>
+                                        <td>アクティブユーザー数</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015<br>12/01</td>
+                                        <td>00000</td>
+                                        <td>00000</td>
+                                        <td>000,000,000</td>
+                                        <td>00</td>
+                                        <td>000,000,000</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /#ostab2 -->
+                            <div class="tab-pane fade" id="ostab3-3">
+                                <table class="simple_t">
+                                    <tr class="tableTitle">
+                                        <td>日付</td>
+                                        <td>新規登録</td>
+                                        <td>再訪問数</td>
+                                        <td>サイトへの総訪問ユーザー</td>
+                                        <td>退会数</td>
+                                        <td>アクティブユーザー数</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015<br>12/01</td>
+                                        <td>00000</td>
+                                        <td>00000</td>
+                                        <td>000,000,000</td>
+                                        <td>00</td>
+                                        <td>000,000,000</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /#ostab3 -->
+                        </div><!-- /#myOsTabContent -->
+                    </div><!-- /#subtab3 -->
+                </div><!-- /#mySubTabContent -->  
+            </div><!-- ./main_contents -->
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

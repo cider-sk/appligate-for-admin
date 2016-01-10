@@ -28,10 +28,10 @@
             </header>
             <div class="public_sidebar">
                 <script type="text/javascript">
-                    $(document).ready(function() {
-                        $('.public_sidebar').load('sidebar.html');
-                    });
-                </script>                
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>
             </div><!-- ./public_sidebar -->
             <div class="main_contents">
                 <div class="searchBox clearfix">
@@ -40,58 +40,10 @@
                     </form>
                 </div>
                 <div class="breadcrumb">
-                    <p class="gray_p">支払</p>
+                    <a class="gray_p" href="./payment.html">支払</a>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">振込先情報</p>
                 </div>
-                <div class="period clearfix">
-                    <h4>期間限定</h4>
-                    <p>期間</p>
-                    <form method="post" action="#">
-                        <input type="date" name="startDate">
-                        <span style="margin-right:20px;">〜</span>
-                        <input type="date" name="endDate">
-                        <input type="submit" class="submit_button refine" value="絞り込み">
-                    </form>
-                    <a class="setday" href="#">開始日〜当日に設定する</a>
-                </div><!-- /.period -->
-                <div class="button-link csv">
-                    <a href="#">CSV出力</a>
-                </div>
-                <div class="clearfix"></div>
-                <div class="clearfix">
-                    <div class="payBox">
-                        <table class="nowPay">
-                            <tr>
-                                <th>現在のお支払額</th>
-                                <td>1DL = 40円</td>
-                            </tr>
-                        </table>
-                        <table class="simple_t">
-                            <tr class="tableTitle">
-                                <td>会社数</td>
-                                <td>累計額</td>
-                                <td>未支払件数</td>
-                                <td>未支払額</td>
-                            </tr>
-                            <tr>
-                                <td>27</td>
-                                <td>000,000,000</td>
-                                <td class="red_a">27</td>
-                                <td class="red_a">000,000,000</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="pagenav">
-                    <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
-                    <a href="#"><span class="current">1</span></a>
-                    <a href="#"><span>2</span></a>
-                    <a href="#"><span>3</span></a>
-                    ・・・
-                    <a href="#"><span>25</span></a>
-                        <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
-                </div><!-- ./pagenav -->
-                <div class="clearfix"></div>
-                
                 <table class="simple_t">
                     <tr class="tableTitle">
                         <td style="width:8%;">対象月<a class="sort_btn" href="#"></a></td>
@@ -117,16 +69,35 @@
                         <td><a href="payment_info.html">振込先情報</a></td>
                     </tr>
                 </table>
-                <div class="pagenav">
-                    <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
-                    <a href="#"><span class="current">1</span></a>
-                    <a href="#"><span>2</span></a>
-                    <a href="#"><span>3</span></a>
-                    ・・・
-                    <a href="#"><span>25</span></a>
-                        <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
-                </div><!-- ./pagenav -->
-            </div>
+                <div class="contentBox">
+                    <table class="dataTable">
+                        <tr>
+                            <th>金融企業名</th>
+                            <td>みずほ銀行</td>
+                        </tr>
+                        <tr>
+                            <th>支店名</th>
+                            <td>００支店</td>
+                        </tr>
+                        <tr>
+                            <th>支店番号</th>
+                            <td>0000000000</td>
+                        </tr>
+                        <tr>
+                            <th>口座の種類</th>
+                            <td>普通</td>
+                        </tr>
+                        <tr>
+                            <th>口座番号</th>
+                            <td><span class="mr20">0000</span>00000000000000</td>
+                        </tr>
+                        <tr>
+                            <th>口座名義人</th>
+                            <td>株式会社さてここでモンダイです</td>
+                        </tr>
+                    </table>
+                </div><!-- ./contentBox -->    
+            </div><!-- ./main_contents -->
         </div><!-- /.container -->
         <footer>
             <div class="move-top">
