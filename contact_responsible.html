@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.public_sidebar').load('sidebar.html');
+                    });
+                </script>
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <a class="gray_p" href="./index.html">アプリ会社様一覧</a>
+                    <span class="gray_p">＞</span>   
+                    <p class="gray_p">担当者へ問い合わせ</p>
+                </div>
+                <form class="contactForm" action="./">
+                    <table class="formTable">
+                        <tr>
+                            <th class="textTitleCel">宛先</th>
+                            <td class="sendTo"><input type="text" name="sendTo[]"><a id="append" href="javascript:void(0)">＋</a></td>
+                        </tr>
+                        <tr>
+                            <th>タイトル</th>
+                            <td><input type="text" name="mailTitle"></td>
+                        </tr>
+                        <tr>
+                            <th>配信日時</th>
+                            <td>
+                                <label><input type="radio" name="emailStart" value="selectDate">時間指定</label>
+                                <input type="date" name="sendDate">
+                                <label><input type="radio" name="emailStart" value="immediately">即時</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="textTitleCel">本文</th>
+                            <td><p class="red_a">(2000文字以内)</p>
+                              <textarea cols="30" rows="10" name="mailContent"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <input class="submit_button" type="submit" value="登録">
+                </form>
+            </div>
+        </div><!-- /.container -->
+        <script>
+$(function () {
+    /* テキストフィールド追加 */
+    $('#append').click(function () {
+        if (confirm('宛先を追加しますか？')) {
+            $('#append').before('<input type="text" name="sendTo[]">');
+            return true;
+        } else {
+            return false;
+        }
+    });
+    $('.submit_button').click(function(){
+        if (confirm('登録しますか？')) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+});
+        </script>
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

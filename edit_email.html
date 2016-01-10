@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <a class="gray_p" href="./index.html">メール編集</a>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">新規登録</p>
+                </div>
+                <form action="./">
+                    <div class="contentBox">
+                        <table class="dataTable newsRegister edit_email">
+                            <tr>
+                                <th>タイトル</th>
+                                <td><input type="text" name="newsTitle"></td>
+                            </tr>
+                            <tr>
+                                <th>OS</th>
+                                <td>
+                                    <label><input type="radio" name="os" value="all">両方</label>
+                                    <label><input type="radio" name="os" value="ios">iosのみ</label>
+                                    <label><input type="radio" name="os" value="android">androidのみ</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>配信日時</th>
+                                <td>
+                                    <label><input type="radio" name="emailStart" value="selectDate">時間指定</label>
+                                    <input type="date" name="sendDate">
+                                    <label><input type="radio" name="emailStart" value="immediately">即時</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>本文</th>
+                                <td>
+                                    <textarea name="newsText"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div><!-- ./contentBox -->
+                    <input type="submit" class="submit_button" value="登録">
+                </form>
+            </div><!-- ./main_contents -->
+        </div><!-- /.container -->
+        <script>
+            $(function(){
+                $('form').submit(function(){
+                    if (confirm('メールを登録しますか？')) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+            });
+        </script>
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

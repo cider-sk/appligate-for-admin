@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>                
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <p class="gray_p">ユーザー一覧</p>
+                </div>
+                <div class="clearfix">
+                    <div class="period clearfix">
+                        <h4>絞り込み</h4>
+                        <form method="post" action="#">
+                            <div class="refineBox">
+                                <label><input type="radio" name="refineSelect">登録期間</label>
+                                <input type="date" name="startDate">
+                                <span style="margin-right:20px;">〜</span>
+                                <input type="date" name="endDate">
+                            </div>
+                            <div class="refineBox">
+                                <label><input type="radio" name="refineSelect">サポートID</label>
+                                <input type="text">
+                            </div>
+                            <div class="refineBox">
+                                <label><input type="radio" name="refineSelect">メールアドレス</label>
+                                <input type="text">
+                            </div>
+                            <div class="refineSubmit">
+                                <input type="submit" class="submit_button refine" value="絞り込み">
+                            </div>
+                        </form>
+                    </div><!-- /.period -->
+                    <div class="pagenav">
+                        <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
+                        <a href="#"><span class="current">1</span></a>
+                        <a href="#"><span>2</span></a>
+                        <a href="#"><span>3</span></a>
+                        ・・・
+                        <a href="#"><span>25</span></a>
+                        <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
+                    </div><!-- ./pagenav -->
+                    <div class="clearfix"></div>
+
+                    <table class="simple_t">
+                        <tr class="tableTitle">
+                            <td style="width:7%;">登録日<a class="sort_btn" href="#"></a></td>
+                            <td style="width:7%;">OS<a class="sort_btn" href="#"></a></td>
+                            <td style="width:10%;">サポートID<a class="sort_btn" href="#"></a></td>
+                            <td style="width:27%;">登録メールアドレス(iOS)<a class="sort_btn" href="#"></a></td>
+                            <td style="width:27%;">登録メールアドレス(android)<a class="sort_btn" href="#"></a></td>
+                            <td style="width:10%;">ステータス<a class="sort_btn" href="#"></a></td>
+                            <td style="width:12%;">削除<a class="sort_btn" href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <td>2015<br/>12/20</td>
+                            <td class="android">android</td>
+                            <td>qqqqq</td>
+                            <td>example@example.com</td>
+                            <td>example@example.com</td>
+                            <td class="now_Release">利用中</td>
+                            <td><a class="user_stop" href="#">アカウント停止</a></td>
+                        </tr>
+                    </table>
+                    <div class="pagenav">
+                        <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
+                        <a href="#"><span class="current">1</span></a>
+                        <a href="#"><span>2</span></a>
+                        <a href="#"><span>3</span></a>
+                        ・・・
+                        <a href="#"><span>25</span></a>
+                        <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
+                    </div><!-- ./pagenav -->
+                </div>
+            </div>
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

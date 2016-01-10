@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>                
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <p class="gray_p">アプリ会社様一覧</p>
+                </div>
+                <div id="topRightBox" class="companyTopRightBox clearfix">
+                    <div class="favorite-num comment-num">
+                        <table class="favorite">
+                            <col span="2" class="left">
+                            <col class="right">
+                            <tr class="title">
+                                <td class="t-left"></td>
+                                <td class="t-right"></td>
+                            </tr>
+                            <tr>
+                                <td class="bold">登録会社数</td>
+                                <td>000,000,000</td>
+                            </tr>
+                        </table>
+                    </div><!-- /.favorite-num -->
+                    <div class="linkBox">
+                        <a class="whiteBox_red mr20" href="#">全ての担当者に問い合わせ</a>
+                    </div>
+                </div><!-- #/toprightBox -->
+                <div class="clearfix">
+                    <div class="pagenav">
+                        <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
+                        <a href="#"><span class="current">1</span></a>
+                        <a href="#"><span>2</span></a>
+                        <a href="#"><span>3</span></a>
+                        ・・・
+                        <a href="#"><span>25</span></a>
+                        <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
+                    </div><!-- ./pagenav -->
+                    <div class="clearfix"></div>
+
+                    <table class="simple_t">
+                        <tr class="tableTitle">
+                            <td style="width:6%;">登録日<a class="sort_btn" href="#"></a></td>
+                            <td style="width:20%;">アプリ名会社名<a class="sort_btn" href="#"></a></td>
+                            <td style="width:8%;">担当者名<a class="sort_btn" href="#"></a></td>
+                            <td style="width:7%;">アプリ<a class="sort_btn" href="#"></a></td>
+                            <td style="width:8%;">公開/登録本数<a class="sort_btn" href="#"></a></td>
+                            <td style="width:7%;">ステータス<a class="sort_btn" href="#"></a></td>
+                            <td style="width:8%;">削除<a class="sort_btn" href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <td>2015<br/>12/20</td>
+                            <td><a class="gray_p" href="./com_single.html">株式会社さてここでモンダイです</a></td>
+                            <td>qqqqq</td>
+                            <td><a href="./com_single.html">アプリ一覧</a></td>
+                            <td>1/1</td>
+                            <td>
+                                <div class="news-status news-public clearfix">
+                                    <span>公開中</span>
+                                    <div class="pub-color"></div>
+                                </div>
+                            </td>
+                            <td><a class="delete_accont" href="#">アカウント削除</a></td>
+                        </tr>
+                    </table>
+                    <div class="pagenav">
+                        <a href="#"><span class="start"><span class="bold">＜</span>最初</span></a>
+                        <a href="#"><span class="current">1</span></a>
+                        <a href="#"><span>2</span></a>
+                        <a href="#"><span>3</span></a>
+                        ・・・
+                        <a href="#"><span>25</span></a>
+                        <a href="#"><span class="last"><span class="bold">＞</span>最後</span></a>
+                    </div><!-- ./pagenav -->
+                </div>
+            </div>
+        </div><!-- /.container -->
+        <script>
+            $(function(){
+                $('a.user_stop').click(function(){
+                    if (confirm('このアカウントを停止しますか？')) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+            });
+        </script>
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -96,28 +96,10 @@ $(document).ready(function() {
                             <h4>期間限定</h4>
                             <p>期間</p>
                             <form method="post" action="#">
-                                <select class="year" name="year">
-                                    <option value="">--</option>
-                                </select>
-                                <select class="month" name="month">
-                                    <option value="">--</option>
-                                </select>
-                                <select class="day" name="day">
-                                    <option value="">--</option>
-                                </select>
-                                <span style="margin:10px;">〜</span>
-                                <select class="year endyear" name="endyear">
-                                    <option value="">--</option>
-                                </select>
-                                <select class="month endmonth"name="endmonth">
-                                    <option value="">--</option>
-                                </select>
-                                <select class="day endday" name="endday">
-                                    <option value="">--</option>
-                                </select>
-                                <div class="button-link refine">
-                                    <a href="#">絞り込み</a>
-                                </div>
+                                <input type="date" name="startDate">
+                                <span style="margin-right:20px;">〜</span>
+                                <input type="date" name="endDate">
+                                <input type="submit" class="submit_button refine" value="絞り込み">
                             </form>
                             <a class="setday" href="#">開始日〜当日に設定する</a>
                         </div><!-- /.period -->
@@ -171,7 +153,7 @@ $(document).ready(function() {
                             </tr>
                         </table>
                     </div><!-- /#subtab1 -->
-                    <div class="tab-pane fade" id="subtab2">
+                    <div class="tab-pane fade mT-20" id="subtab2">
                         <div class="button-link csv">
                             <a href="#">CSV出力</a>
                         </div>
@@ -269,28 +251,10 @@ $(document).ready(function() {
                             <h4>期間限定</h4>
                             <p>期間</p>
                             <form method="post" action="#">
-                                <select class="year" name="year">
-                                    <option value="">--</option>
-                                </select>
-                                <select class="month" name="month">
-                                    <option value="">--</option>
-                                </select>
-                                <select class="day" name="day">
-                                    <option value="">--</option>
-                                </select>
-                                <span style="margin:10px;">〜</span>
-                                <select class="year endyear" name="endyear">
-                                    <option value="">--</option>
-                                </select>
-                                <select class="month endmonth"name="endmonth">
-                                    <option value="">--</option>
-                                </select>
-                                <select class="day endday" name="endday">
-                                    <option value="">--</option>
-                                </select>
-                                <div class="button-link refine">
-                                    <a href="#">絞り込み</a>
-                                </div>
+                                <input type="date" name="startDate">
+                                <span style="margin-right:20px;">〜</span>
+                                <input type="date" name="endDate">
+                                <input type="submit" class="submit_button refine" value="絞り込み">
                             </form>
                             <a class="setday" href="#">開始日〜当日に設定する</a>
                         </div><!-- /.period -->
