@@ -34,5 +34,12 @@ $(function(){
             }
         });
     });
+    $('.submit_button').click(function(){
+        if (confirm('登録しますか？')) {
+            return true;
+        } else {
+            return false;
+        }
+    });
 });
 

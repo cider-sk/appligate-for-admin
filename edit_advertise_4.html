@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.public_sidebar').load('sidebar.html');
+                    });
+                </script>                
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <a class="gray_p" href="./edit_advertise_list.html">広告枠編集</a>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">新規登録</p>
+                </div>
+                <div class="clearfix">
+                    <div id="myOsTabContent" class="tab-content">
+                        <ul id="osmenu" class="nav nav-tabs submenu">
+                            <li><a href="./edit_advertise.html">top 5枠</a></li>
+                            <li><a href="./edit_advertise_2.html">ポップアップ 1枠</a></li>
+                            <li><a href="./edit_advertise_3.html">ポップアップ 3枠</a></li>
+                            <li class="active"><a href="./edit_advertise_4.html">アプリ会社様向け</a></li>
+                        </ul>
+                        <div class="tab-pane fade in active" id="tab1">
+                            <form id="forCompany" class="advertiseForm" action="./">
+                                <div class="adBox topBox">
+                                    <table class="topTable">
+                                        <tr>
+                                            <th>期間</th>
+                                            <td>
+                                                <input type="date" name="startDate">
+                                                <span style="margin-right:20px;">〜</span>
+                                                <input type="date" name="endDate">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="adBox">
+                                    <table>
+                                        <tr>
+                                            <th>枠</th>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <th>配信</th>
+                                            <td>
+                                                <label><input type="radio" name="sendType" value="one" checked>１社を固定</label>
+                                                <label><input type="radio" name="sendType" value="manyRandom">複数社をランダム</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>広告</th>
+                                            <td>
+                                                <select name="adCom">
+                                                    <option value="2352">広告会社様</option>
+                                                    <option value="2343">広告会社様</option>
+                                                    <option value="24632">広告会社様</option>
+                                                </select>
+                                                <a class="red_a" href="./advertise_company_list.html">＋広告会社を編集</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <input type="submit" class="submit_button" value="確定">
+                                </div>
+                            </form>
+                        </div><!-- /#tab1 -->
+                    </div><!-- /#myOsTabContent -->
+                </div>
+            </div>
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>
