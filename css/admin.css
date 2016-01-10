@@ -718,3 +718,88 @@ input.refine:hover{
 .paymentBottomBox .nowPay {
     margin-top: 10px;
 }
+.adBox{
+    padding-left:50px;
+}
+.topBox{
+    border-bottom:1px solid #4d4d4d;
+    margin-bottom:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+form.advertiseForm table{
+    width:100%;
+}
+form.advertiseForm table th{
+    width:10%;
+    text-align:center;
+    padding:10px;
+}
+form.advertiseForm table td{
+    border-bottom:none;
+    padding:10px;
+}
+.adSelectBox,.adBox1{
+    padding-left:30px;
+    padding-bottom:20px;
+}
+#conditionBox{
+    margin-bottom:10px;
+}
+.adSelectBox .jenre select{
+    margin-left:5px;
+    margin-right:10px;
+}
+.adSelectBox .new select,
+.adSelectBox .ranking select
+{
+    margin-left:20px;
+    margin-right:10px;
+}
+input[name="adType"]{
+    margin-bottom:10px;
+}
+select[name="searchType"]{
+    margin-right:20px;
+}
+#searchApp,#searchCom{
+    background-color: #d50000;
+    color: #fff;
+    border: none;
+    padding: 4px 20px;
+    margin-bottom:20px;
+}
+.adSearchResult{
+    padding-left:10px;
+}
+span.adSearchResult{
+    display:block;
+    padding-left:10px;
+}
+.adSearchResult label{
+    display:block;
+    margin-bottom:10px;
+}
+.advertiseCompanyForm{
+    margin-top:20px;
+}
+.advertiseCompanyForm table td{
+    border-bottom:none;
+    padding-bottom:20px;
+}
+.advertiseCompanyForm table td input{
+    width:80%;
+}
+.advertiseCompanyForm table th{
+    width:30%;
+    padding-bottom:20px;
+}
+.adImgTable{
+    width:100%;
+}
+table.adImgTable th{
+    width:15%;
+}
+.adImgTable img{
+    width:40%;
+}

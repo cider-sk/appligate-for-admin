@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+$(document).ready(function() {
+    $('.public_sidebar').load('sidebar.html');
+});
+                </script>                
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <a class="gray_p" href="./edit_advertise_list.html">広告枠編集</a>
+                    <span class="gray_p">＞</span>
+                    <a class="gray_p" href="./edit_advertise_list.html">新規登録</a>
+                    <span class="gray_p">＞</span>
+                    <a class="gray_p" href="./edit_advertise_list.html">広告会社編集</a>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">編集</p>
+                </div>
+                <div class="clearfix">
+                    <div id="myOsTabContent" class="tab-content">
+                        <ul id="osmenu" class="nav nav-tabs submenu">
+                            <li><a href="./edit_advertise.html">top 5枠</a></li>
+                            <li><a href="./edit_advertise_2.html">ポップアップ 1枠</a></li>
+                            <li><a href="./edit_advertise_3.html">ポップアップ 3枠</a></li>
+                            <li class="active"><a href="./edit_advertise_4.html">アプリ会社様向け</a></li>
+                        </ul>
+                        <div class="tab-pane fade in active" id="tab1">
+                            <div class="adBox">
+                                <form class="advertiseCompanyForm row" action="./">
+                                    <table class="col-xs-6">
+                                        <tr>
+                                            <th>会社名</th>
+                                            <td><input type="text" name="comName"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>担当者名</td>
+                                            <td><input type="text" name="resName"></td>
+                                        </tr>
+                                    </table>
+                                    <table class="col-xs-6">
+                                        <tr>
+                                            <th>HP</th>
+                                            <td><input type="text" name="hpUrl"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>連絡先</td>
+                                            <td><input type="text" name="contact"></td>
+                                        </tr>
+                                    </table>
+                                    <table class="adImgTable">
+                                        <tr>
+                                            <th style="vertical-align:top;">画像</th>
+                                            <td>
+                                                <img src="img/adimg_1.png" alt="">
+                                                <input type="file" name="adImage">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="clearfix"></div>
+                                    <table class="col-xs-6">
+                                        <tr>
+                                            <th>広告リンク先</th>
+                                            <td><input type="text" name="adUrl"></td>
+                                        </tr>
+                                    </table>
+                                    <div class="clearfix"></div>
+                                    <input type="submit" class="submit_button" value="確定">
+                                </form>   
+                            </div>
+                        </div><!-- /#tab1 -->
+                    </div><!-- /#myOsTabContent -->
+                </div>
+            </div>
+        </div><!-- /.container -->
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>
