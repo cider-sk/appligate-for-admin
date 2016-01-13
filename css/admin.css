@@ -813,3 +813,30 @@ input.inputYoutubeId{
 .next-edit a:hover {
     color: #ffffff;
 }
+.status-color{
+    float: right;
+    height: 15px;
+    width: 35px;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.statusBox .public .status-color{
+    background-color: #aa0000;
+}
+.statusBox .public .status-text{
+    color: #aa0000;
+}
+.statusBox .private .status-color{
+    background-color: #4d4d4d;
+    float: left;
+    margin-right: 5px;
+    margin-left:0;
+}
+.statusBox .private .status-text{
+    color: #4d4d4d;
+}
+.statusColorBox {
+    padding: 1px;
+    float: left;
+    border: 1px solid;
+}

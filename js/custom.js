@@ -30,5 +30,25 @@ $(function(){
             return false;
         }
     });
+    
+    //ステータスの変更
+    $('a.status-text').click(function(){
+        if (confirm('ステータスを変更しますか？')) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    $('a.status-text').click(function(){
+        var status = $(this).parent();
+        if ($(status).hasClass('public')) {
+            $(status).removeClass('public');
+            $(status).addClass('private');
+            $(this).html('未公開');
+        } else if($(status).hasClass('private')) {
+            $(status).removeClass('private');
+            $(status).addClass('public');
+            $(this).html('公開中');
+        }
+    });
 });
-
