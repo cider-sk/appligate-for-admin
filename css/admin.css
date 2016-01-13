@@ -1,6 +1,9 @@
 a{
     color:#671eff;
 }
+a:hover{
+    color:#671eff;
+}
 html {
     overflow: auto;
 }
@@ -166,14 +169,14 @@ span.bold{
 table.simple_t{
     width:100%;
 }
-tr.tableTitle td{ 
+table tr.tableTitle td{ 
     background-color:#f2f2f2;
+    padding:5px;
 }
 table.simple_t td{
-    padding:10px 5px;
+    padding:15px 5px;
     border:solid 1px #5d5d5d;
     border-bottom:solid 1px #5d5d5d!important;
-    
 }
 a.sort_btn{
     position: relative;
@@ -531,15 +534,14 @@ table.newsRegister textarea{
     font-weight: 100;
     font-size: 18px;
     color: #ffffff;
-    margin: 10px auto;
     padding: 10px 20px;
     box-shadow: 0 3px 0 #7b0000;
     margin-right: auto;
     border:none;
 }
 .submit_button:hover{
-    margin: 12px auto 8px;
     box-shadow: 0 1px 0 #7b0000;
+    transform: translate3d(0, 3px, 0);
 }
 ul.tag_list{
     padding-left:0;
@@ -705,7 +707,6 @@ input.refine{
     width:200px;
 }
 input.refine:hover{
-        margin: 12px auto 8px;
     box-shadow: 0 1px 0 #4d4d4d;
 }
 .refineBox{
@@ -802,4 +803,13 @@ table.adImgTable th{
 }
 .adImgTable img{
     width:40%;
+}
+.csv a:hover {
+    color:#000;
+}
+input.inputYoutubeId{
+    width:150px;
+}
+.next-edit a:hover {
+    color: #ffffff;
 }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理者ページ | appligate</title>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/custom.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <div class="container row">
+            <header>
+                <a href="./index.html"><img class="head-logo" src="img/header_logo.png" alt="ヘッダーロゴ"></a>
+                <div class="head-right">
+                    <a class="logout"href="#">アカウント追加</a>
+                    <a class="logout"href="#">ログアウト</a>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="public_sidebar">
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.public_sidebar').load('sidebar.html');
+                    });
+                </script>
+            </div><!-- ./public_sidebar -->
+            <div class="main_contents">
+                <div class="searchBox clearfix">
+                    <form class="head_search" action="POST">
+                        <input type="text"><input type="submit" value="検索">
+                    </form>
+                </div>
+                <div class="breadcrumb">
+                    <a class="gray_p" href="./edit_tag.html">タグ編集・追加</a>
+                    <span class="gray_p">＞</span>
+                    <p class="gray_p">属性タグ編集</p>
+                </div>
+                <div class="contentBox">
+                    <h4 class="gray_p">属性タグ</h4>
+                    <form class="edit_tag_form" action="./">
+                        <ul class="edit_tag row">
+                            <li class="col-xs-6">
+                                <span class="tagName">RPG</span>
+                                <label><input type="radio" name="isShow-1" value="show">表示</label>
+                                <label><input type="radio" name="isShow-1" value="hide">非表示</label>
+                                <a class="tag_delete" href="./edit_tag_form.html?=1">削除</a>
+                            </li>
+                            <li class="col-xs-6">
+                                <span class="tagName">RPG</span>
+                                <label><input type="radio" name="isShow-2" value="show">表示</label>
+                                <label><input type="radio" name="isShow-2" value="hide">非表示</label>
+                                <a class="tag_delete" href="./edit_tag_form.html?=2">削除</a>
+                            </li>
+                            <li class="col-xs-6">
+                                <span class="tagName">シミュレーション</span>
+                                <label><input type="radio" name="isShow-3" value="show">表示</label>
+                                <label><input type="radio" name="isShow-3" value="hide">非表示</label>
+                                <a class="tag_delete" href="./edit_tag_form.html?=3">削除</a>
+                            </li>
+                            <li class="col-xs-6">
+                                <span class="tagName">アドベンチャー</span>
+                                <label><input type="radio" name="isShow-4" value="show">表示</label>
+                                <label><input type="radio" name="isShow-4" value="hide">非表示</label>
+                                <a class="tag_delete" href="./edit_tag_form.html?=4">削除</a>
+                            </li>
+                            <li class="col-xs-6">
+                                <span class="tagName">アドベンチャー</span>
+                                <label><input type="radio" name="isShow-4" value="show">表示</label>
+                                <label><input type="radio" name="isShow-4" value="hide">非表示</label>
+                                <a class="tag_delete" href="./edit_tag_form.html?=4">削除</a>
+                            </li>
+                            <li class="col-xs-6">
+                                <span class="tagName">アドベンチャー</span>
+                                <label><input type="radio" name="isShow-4" value="show">表示</label>
+                                <label><input type="radio" name="isShow-4" value="hide">非表示</label>
+                                <a class="tag_delete" href="./edit_tag_form.html?=4">削除</a>
+                            </li>
+                            <li class="col-xs-6">
+                                <span class="tagName">アドベンチャー</span>
+                                <label><input type="radio" name="isShow-4" value="show">表示</label>
+                                <label><input type="radio" name="isShow-4" value="hide">非表示</label>
+                                <a class="tag_delete" href="./edit_tag_form.html?=4">削除</a>
+                            </li>
+                        </ul>
+                        <input type="submit" class="submit_button" value="登録">
+                    </form>
+                </div>           
+            </div>
+        </div><!-- /.container -->
+        <script>
+            $(function(){
+                $('a.tag_delete').click(function(){
+                    if (confirm('この項目を削除しますか？')) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+            });
+        </script>
+        <footer>
+            <div class="move-top">
+                <div class="glyphicon glyphicon-chevron-up">TOP</div>
+            </div>
+        </footer>
+    </body>
+</html>

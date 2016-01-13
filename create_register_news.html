@@ -40,7 +40,7 @@ $(document).ready(function() {
                     </form>
                 </div>
                 <div class="breadcrumb">
-                    <a class="gray_p" href="./index.html">ニュース配信登録</a>
+                    <a class="gray_p" href="./register_news.html">ニュース配信登録</a>
                     <span class="gray_p">＞</span>
                     <p class="gray_p">新規登録（ユーザー様向け）</p>
                 </div>
@@ -64,15 +64,7 @@ $(document).ready(function() {
                                 <td>
                                     即時
                                     <span class="m20float ml20">〜</span>
-                                    <select class="year" name="year">
-                                        <option value="">--</option>
-                                    </select>
-                                    <select class="month" name="month">
-                                        <option value="">--</option>
-                                    </select>
-                                    <select class="day" name="day">
-                                        <option value="">--</option>
-                                    </select>
+                                    <input type="date" name="endDate">
                                     <p>終了日を設定しない場合は、リリース通知と同時に自動的に予約終了し、掲載が落とされます。</p>
                                 </td>
                             </tr>
@@ -83,7 +75,7 @@ $(document).ready(function() {
                                     <label><input type="radio" name="isUse" value="use">使用する</label>
                                     <label><input type="radio" name="isUse" value="nouse">使用しない</label>
                                     <label><input type="radio" name="isUse" value="usemovie">動画</label>
-                                    <span class="youtubeurl">https://www.youtube.com/watch?v=</span><input type="text" name="youtubeID">
+                                    <span class="youtubeurl">https://www.youtube.com/watch?v=</span><input type="text" class="inputYoutubeId" name="youtubeID"><br>
                                     <img class="in_table" src="img/apppresent.png" alt="">
                                     <input type="file" name="newsImg">
                                 </td>
